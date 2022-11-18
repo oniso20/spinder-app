@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Ubuntu&display=swap');
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+h2 {
+    font-family: 'Lobster', cursive;
+    font-size: 3rem;
+    color:rgb(224, 221, 221);
+}
+
+ul {
+    background: rgba(253, 69, 247, 0.545);
+    width: 70px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+li {
+    list-style-type: none;
+    padding: 1rem 0 1rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.333);
+    transform: translateY(55px);
+    text-align: center;
+    cursor: pointer;
+    
+}
+
+a {
+    color: rgb(224, 221, 221);
+    text-decoration: none;
+    padding: 10px 10px;
+}
+
+.icon {
+    width: 30px;
+}
+
+.icon:hover {
+    transform: scale(1.3);
+    filter:invert(1);
+}
+
+nav li:hover img, .active img {
+    filter: drop-shadow(0.5rem 0.5rem 0.5rem rgb(255, 255, 255));
+    filter:invert(1);
+}
+
+nav img {
+    filter:invert(1);
+}
