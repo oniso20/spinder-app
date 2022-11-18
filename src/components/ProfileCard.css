@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Ubuntu&display=swap');
+
+:root {
+    --main-font: 'Ubuntu', sans-serif;
+    --logo-font: 'Lobster', cursive;
+    --white-color: #fdfdfde2;
+    --purple: #DA22FF;
+    --dark-purple: #9733EE;
+  }
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    color:rgba(255, 255, 255, 0.913);
+}
+
+h3 {
+    margin: 1rem;
+    font-size: 1.2rem;
+}
+
+p {
+    margin: 1rem;
+    line-height: 1rem;
+}
+
+.profile-card {
+    width: 400px;
+    height: 500px;
+    border-radius: 1rem;
+    background-color: rgba(240, 255, 255, 0.336);
+    margin: 0 auto;
+    border: 2px solid rgba(255, 255, 255, 0.444);
+    position: relative;
+}
+
+.pfp {
+    width: 200px;
+    height: auto;
+    border-radius: 1rem;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+}
+
+.music-data-box {
+    width: 398px;
+    height: 250px;
+    border-radius: 1rem;
+    /* border: 1px solid white; */
+    position: absolute;
+    bottom: 0;
+}
+
+.icons-box {
+    width: 75px;
+    height: 35px;
+    /* border: 1px solid white; */
+    position: absolute;
+    bottom: 0.5rem;
+    right: 0.5rem;
+}
+
+.icons-box img {
+    padding: 2px;
+}
