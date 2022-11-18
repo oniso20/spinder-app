@@ -25,7 +25,7 @@ html {
 h1 {
   font-family: var(--logo-font);
   font-size: 5rem;
-  color: #fdfdfdbd;
+  color: #fdfdfd;
   margin: 0 0 0 5%;
   display: inline-block;
   letter-spacing: 2px;

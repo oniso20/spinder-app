@@ -10,7 +10,7 @@ import favImg from '../assets/diamond.svg';
 const Nav = () => {
   return (
 
-        <div>
+        <nav>
             <ul>
                 <li><h2>S!</h2></li>
                 <li><a href="#"><img className="icon" src={homeImg} alt="home-icon" /></a></li>
@@ -20,7 +20,7 @@ const Nav = () => {
                 <li><a href="#"><img className="icon" src={matchImg} alt="match-icon" /></a></li>
                 <li><a href="#"><img className="icon" src={favImg} alt="favorite-icon" /></a></li>
             </ul>
-        </div>
+        </nav>
 
   )
 };
