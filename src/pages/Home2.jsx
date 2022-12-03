@@ -1,23 +1,12 @@
-import React, { useState } from "react";
-
-import Nav from "../components/Nav";
-import AuthModal1 from "../components/AuthModal1";
-
+import React from "react";
 import "../styles/Home.css";
+import Nav from "../components/Nav";
 import coupleImg from "../assets/purplebg.jpg";
 import couple2Img from "../assets/pinkishbg.jpg";
 import couple3Img from "../assets/purplebg2.jpg";
+import { Link } from "react-router-dom";
 
 const Home = () => {
-  const [showModal, setShowModal] = useState(false);
-
-  const authToken = false;
-
-  const handleClick = () => {
-    setShowModal(true);
-    console.log("button clicked");
-  };
-
   return (
     <div className="wrapper">
       <Nav />
@@ -32,12 +21,14 @@ const Home = () => {
         </p>
 
         <div className="btns">
-          <button onClick={handleClick}>SIGN UP</button>
-          <button onClick={handleClick}>LOGIN</button>
+          <button>
+            <Link to="/auth">SIGN UP</Link>
+          </button>
+          <button>
+            <Link to="/auth">LOG IN</Link>
+          </button>
         </div>
       </div>
-
-      {showModal && <AuthModal1 setShowModal={setShowModal} />}
 
       <div className="intro-img">
         <img className="couple-img" src={coupleImg} alt="couple-img" />
