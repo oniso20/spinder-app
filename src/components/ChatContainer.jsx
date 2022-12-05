@@ -21,7 +21,7 @@ const ChatContainer = () => {
             <ChatsDisplay />
             </div>
             <div className="chat-displayContainer">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, delectus distinctio impedit atque similique ullam dolor et recusandae, maxime aspernatur tenetur possimus dolore repellat voluptas pariatur architecto ducimus magnam qui!
+            Lorem ipsum 
             </div>
         </div>
       </div>
