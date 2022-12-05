@@ -1,13 +1,53 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+/*------ Chat Container -----*/
+.chat-container{
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+    width: 30%;
+    text-align: left;
+    z-index: 1;
+}
+.chat-container .chat-container-header{
+   background: linear-gradient(45deg, rgb(254, 48,114), rgb(255, 89, 64));
+   height: 100px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+.chat-container .option:disabled{
+    border-bottom: 1px solid rgb(187, 187, 187);
+}
+.chat-container .profile,
+.chat-container .log-out-icon{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    color: rgb(255, 255, 255);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.img-container{
+    height: 30px;
+    width: 30px;
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 10px;
 }
+
+.img-container img{
+    width: 100%;
+}
+
+/*------Chat Display -------*/
+.chat-display{
+    padding: 20px;
+    height: 60vh;
+    overflow-y: auto;
+}
+
+.chat-input{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
