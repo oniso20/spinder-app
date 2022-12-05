@@ -4,13 +4,13 @@ body {
     font-family: 'Ubuntu', sans-serif;
 }
 
-h2 {
+nav h2 {
     font-family: 'Lobster', cursive;
     font-size: 3rem;
     color:rgb(224, 221, 221);
 }
 
-ul {
+nav ul {
     background: rgba(253, 69, 247, 0.545);
     width: 70px;
     height: 100vh;
@@ -20,7 +20,7 @@ ul {
     flex-direction: column;
 }
 
-li {
+nav li {
     list-style-type: none;
     padding: 1rem 0 1rem 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.333);
@@ -30,7 +30,7 @@ li {
     
 }
 
-a {
+nav a {
     color: rgb(224, 221, 221);
     text-decoration: none;
     padding: 10px 10px;

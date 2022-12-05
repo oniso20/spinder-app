@@ -33,6 +33,15 @@ const SignIn = (props) => {
             Forgot Password?
           </p>
           <button onClick={props.signInClick}> Create an account</button>
+
+          <button type="submit">LOG IN</button>
+          <span id="newUser" onClick={forgotPasswordHandler}>
+            Forgot Password?
+          </span>
+          <span onClick={props.signInClick}>
+            New user? Click here.
+          </span>
+
         </form>
       </div>
     </div>

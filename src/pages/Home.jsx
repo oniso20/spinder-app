@@ -24,7 +24,9 @@ const Home = () => {
   };
 
   return (
-    <div className="wrapper">
+
+
+   <div className="wrapper">
       <Nav />
 
       <div className="intro-text">
@@ -55,6 +57,7 @@ const Home = () => {
         <img className="couple2-img" src={couple2Img} alt="couple-img" />
         <img className="couple3-img" src={couple3Img} alt="couple-img" />
       </div>
+
     </div>
   );
 };
