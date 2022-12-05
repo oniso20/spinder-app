@@ -10,12 +10,17 @@ import couple3Img from "../assets/purplebg2.jpg";
 
 const Home = () => {
   const [showModal, setShowModal] = useState(false);
+  const [isSignUp, setIsSignUp] = useState(true);
 
   const authToken = false;
 
   const handleClick = () => {
     setShowModal(true);
     console.log("button clicked");
+  };
+  const handleLogIn = () => {
+    setShowModal(true);
+    setIsSignUp(false);
   };
 
   return (
@@ -33,11 +38,17 @@ const Home = () => {
 
         <div className="btns">
           <button onClick={handleClick}>SIGN UP</button>
-          <button onClick={handleClick}>LOGIN</button>
+          <button onClick={handleLogIn}>LOGIN</button>
         </div>
       </div>
 
-      {showModal && <AuthModal1 setShowModal={setShowModal} />}
+      {showModal && (
+        <AuthModal1
+          setShowModal={setShowModal}
+          setIsSignUp={setIsSignUp}
+          isSignUp={isSignUp}
+        />
+      )}
 
       <div className="intro-img">
         <img className="couple-img" src={coupleImg} alt="couple-img" />

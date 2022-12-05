@@ -1,5 +1,6 @@
 .auth-modal-container {
     display: flex;
+    flex-direction: column;
     position: absolute;
     top: 30%;
     margin-left: 20%;
@@ -17,7 +18,25 @@
     position: relative;
 }
 
+.text-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 .auth-modal .closeIcon {
     font-size: 2rem;
-    margin-left: 250%;
+    float: right;
+}
+
+.form-signup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.form-signup>input {
+    margin: 0.5rem;
 }
