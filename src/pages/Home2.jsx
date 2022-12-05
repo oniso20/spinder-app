@@ -1,32 +1,14 @@
-import React, { useState } from "react";
-
-import Nav from "../components/Nav";
-import AuthModal1 from "../components/AuthModal1";
-
+import React from "react";
 import "../styles/Home.css";
+import Nav from "../components/Nav";
 import coupleImg from "../assets/purplebg.jpg";
 import couple2Img from "../assets/pinkishbg.jpg";
 import couple3Img from "../assets/purplebg2.jpg";
+import { Link } from "react-router-dom";
 
 const Home = () => {
-  const [showModal, setShowModal] = useState(false);
-  const [isSignUp, setIsSignUp] = useState(true);
-
-  const authToken = false;
-
-  const handleClick = () => {
-    setShowModal(true);
-    console.log("button clicked");
-  };
-  const handleLogIn = () => {
-    setShowModal(true);
-    setIsSignUp(false);
-  };
-
   return (
-
-
-   <div className="wrapper">
+    <div className="wrapper">
       <Nav />
 
       <div className="intro-text">
@@ -39,25 +21,20 @@ const Home = () => {
         </p>
 
         <div className="btns">
-          <button onClick={handleClick}>SIGN UP</button>
-          <button onClick={handleLogIn}>LOGIN</button>
+          <button>
+            <Link to="/auth">SIGN UP</Link>
+          </button>
+          <button>
+            <Link to="/auth">LOG IN</Link>
+          </button>
         </div>
       </div>
-
-      {showModal && (
-        <AuthModal1
-          setShowModal={setShowModal}
-          setIsSignUp={setIsSignUp}
-          isSignUp={isSignUp}
-        />
-      )}
 
       <div className="intro-img">
         <img className="couple-img" src={coupleImg} alt="couple-img" />
         <img className="couple2-img" src={couple2Img} alt="couple-img" />
         <img className="couple3-img" src={couple3Img} alt="couple-img" />
       </div>
-
     </div>
   );
 };

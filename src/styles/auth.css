@@ -25,12 +25,12 @@
     box-shadow: 0px 15px 25px -4px rgba(150, 150, 150, 0.24)
 }
 
-form {
+/* form {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: left;
     flex-direction: column;
-}
+} */
 
 input {
     margin: 0 0 20px 0;

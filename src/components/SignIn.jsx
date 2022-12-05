@@ -24,17 +24,24 @@ const SignIn = (props) => {
   return (
     <div className="auth-container">
       <div className="auth">
-        <h2> Login </h2>
+        <h3> Login </h3>
         <form onSubmit={onSubmit}>
           <input placeholder="Email" type="email" ref={emailRef} />
           <input placeholder="Password" type="password" ref={psdRef} />
           <button type="submit">Sign In</button>
+          <p id="newUser" onClick={forgotPasswordHandler}>
+            Forgot Password?
+          </p>
+          <button onClick={props.signInClick}> Create an account</button>
+
+          <button type="submit">LOG IN</button>
           <span id="newUser" onClick={forgotPasswordHandler}>
             Forgot Password?
           </span>
           <span onClick={props.signInClick}>
-            Already have an account? click here
+            New user? Click here.
           </span>
+
         </form>
       </div>
     </div>
