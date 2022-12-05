@@ -1,0 +1,42 @@
+.auth-modal-container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 30%;
+    margin-left: 20%;
+    margin-right: auto;
+    width: 400px;
+    max-width: 360px;
+    height: 400px;
+    background-color: #103359de;
+    border-radius: 5px;
+    padding: 0.6rem;
+    color: #ffffff;
+}
+
+.auth-modal {
+    position: relative;
+}
+
+.text-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.auth-modal .closeIcon {
+    font-size: 2rem;
+    float: right;
+}
+
+.form-signup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.form-signup>input {
+    margin: 0.5rem;
+}

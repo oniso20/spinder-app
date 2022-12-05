@@ -18,7 +18,7 @@ const SignUp = (props) => {
   return (
     <div className="auth-container">
       <div className="auth">
-        <h2> New User</h2>
+        <h3> New User</h3>
         <form onSubmit={onSubmit}>
           <input placeholder="Email" type="email" ref={emailRef} />
           <input placeholder="Name" type="name" ref={nameRef} />

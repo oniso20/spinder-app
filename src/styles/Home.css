@@ -22,7 +22,7 @@ html {
   background-size: cover;
 }
 
-h1 {
+.wrapper h1 {
   font-family: var(--logo-font);
   font-size: 5rem;
   color: #fdfdfd;
@@ -31,7 +31,7 @@ h1 {
   letter-spacing: 2px;
 }
 
-h3 {
+.wrapper h3 {
   font-family: var(--main-font);
   margin: 7% 0 0 5%;
   color: var(--white-color);
@@ -40,7 +40,7 @@ h3 {
   display: inline-block;
 }
 
-p {
+.wrapper p {
   font-family: var(--main-font);
   margin: 10% 0 0 5%;
   color: var(--white-color);
@@ -54,10 +54,12 @@ p {
 
 .wrapper {
   display: flex;
+  width: 100vw;
+  height: 100vh;
 }
 
 .intro-text {
-  
+
   width: 35vw;
   height: 60vh;
   margin: 7% 0 0 15%;
@@ -78,7 +80,7 @@ p {
 .couple2-img,
 .couple3-img {
   width: 400px;
-  border-radius: 74% 26% 77% 23% / 44% 60% 40% 56% ;
+  border-radius: 74% 26% 77% 23% / 44% 60% 40% 56%;
   opacity: 0.8;
 }
 
@@ -110,14 +112,14 @@ p {
 /* BUTTONS */
 
 button {
-  background-image: linear-gradient(to right, #DA22FF 0%, #9733EE  41%, #DA22FF  100%);
+  background-image: linear-gradient(to right, #DA22FF 0%, #9733EE 41%, #DA22FF 100%);
   padding: 15px;
-  width: 120px;
+  width: fit-content;
   text-align: center;
   text-transform: uppercase;
   transition: 0.5s;
   background-size: 200% auto;
-  color: white;            
+  color: white;
   border-radius: 10px;
   border: none;
   font-family: var(--main-font);
@@ -126,11 +128,12 @@ button {
 }
 
 button:hover {
-  background-position: right center; /* change the direction of the change here */
+  background-position: right center;
+  /* change the direction of the change here */
   color: #fff;
   text-decoration: none;
 }
 
 .btns {
-  margin: 5rem 0 0 2rem; 
+  margin: 5rem 0 0 2rem;
 }
