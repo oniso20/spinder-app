@@ -2,6 +2,7 @@ import React from "react";
 import Dashboard from "./pages/Dashboard";
 import Home from "./pages/Home";
 import Onboarding from "./pages/Onboarding";
+import ChatContainer from "./components/ChatContainer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AuthModal from "./components/AuthModal";
 // import Auth from "./components/Auth";
@@ -18,6 +19,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/onboarding" element={<Onboarding />} />
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/chatcontainer" element={<ChatContainer />} />
+  
           <Route path="/auth" element={<AuthModal />} />
         </Routes>
       </BrowserRouter>
