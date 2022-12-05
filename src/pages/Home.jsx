@@ -12,9 +12,7 @@ const Home = () => {
 
     <div className='wrapper'>
 
-      <Nav />
-
-
+      
 
     <div className='intro-text'>
          <h1>Spinder!</h1>

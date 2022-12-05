@@ -25,7 +25,7 @@ const SignUp = (props) => {
           <input placeholder="Password" type="password" ref={psdRef} />
           <button type="submit">Register</button>
           <span id="newUser" onClick={props.signInClick}>
-            New user? Click here
+            Already have an account? Click here
           </span>
         </form>
       </div>
