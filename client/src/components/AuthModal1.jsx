@@ -85,7 +85,7 @@ const AuthModal1 = ({ setShowModal, setIsSignUp, isSignUp }) => {
           />
         )}
 
-        <input className="submit-button" type="submit" />
+        <button>Sign Up</button>
         <p>{error}</p>
       </form>
     </div>
