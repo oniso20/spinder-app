@@ -63,13 +63,11 @@ html {
   width: 35vw;
   height: 60vh;
   margin: 7% 0 0 15%;
-  /* border: 1px solid white; */
 }
 
 .intro-img {
   position: relative;
-  /* overflow: hidden; */
-  max-width: 600px;
+  /* max-width: 65vw; */
   margin: 0 auto;
   width: 45vw;
   height: 80vh;

@@ -1,11 +1,18 @@
 import React from "react";
 import { useUserContext } from "../context/UserContext";
+// import Nav from "../components/Nav";
+// import ProfileCard from "../components/ProfileCard";
 
 const Dashboard = () => {
+
   const { user, logoutUser } = useUserContext();
   console.log(user);
+  
+  
   return (
+
     <div>
+    
       <h1>Dashboard </h1>
       <h2>Name : {user.displayName}</h2>
       <h2>Email : {user.email}</h2>

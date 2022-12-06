@@ -7,9 +7,9 @@ const ChatsHeader = () => {
             <div className="img-container">
                 <img src="" alt="" />
             </div>
-            <h3>UserNames</h3>
+            <h2>UserNames</h2>
             </div>      
-            <i className="log-out-icon">€</i>              
+            <i className="log-out-icon">x</i>              
         </div>
     );
 };
