@@ -1,0 +1,6 @@
+{
+  "devDependencies": {
+    "axios": "^1.2.1",
+    "react-cookie": "^4.1.1"
+  }
+}
