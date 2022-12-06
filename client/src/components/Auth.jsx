@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import SignIn from "./SignIn";
 import SignUp from "./SignUp";
-import "../styles/auth.css";
+// import "../styles/auth.css";
 
 const Auth = () => {
   const [index, setIndex] = useState(false);

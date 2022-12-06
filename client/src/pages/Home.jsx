@@ -27,7 +27,7 @@ const Home = () => {
 
 
    <div className="wrapper">
-      <Nav />
+      {/* <Nav /> */}
 
       <div className="intro-text">
         <h1>Spinder!</h1>
