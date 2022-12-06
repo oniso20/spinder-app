@@ -4,6 +4,14 @@
 
 “The fusion of music and tinder will be mind-blowing!” This project aims to solve this gap in the tech industry. We hope to match people based on their music tastes and moods. Music has been seen as a vital element in judging character and “person” vibes. We hope to explore these vibes in helping people connect through music.
 
+## Project Authors/Contributors
+
+Jenni Alanko - https://github.com/kirpister
+
+Alexander Otulugbu - https://github.com/BPharoh
+
+Onis Emem - https://github.com/oniso20
+
 ## Available Scripts
 
 In the project client or server directory, you can run:
