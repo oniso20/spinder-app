@@ -36,13 +36,13 @@ const Onboarding = () => {
       <div className="radio">
 
         <input type="radio" id="male" name="gender" />
-        <label for="">Male</label>
+        <label for="male">Male</label>
        
         <input type="radio" id="female" name="gender" />
-        <label for="">Female</label>
+        <label for="female">Female</label>
       
         <input type="radio" id="other" name="gender" />
-        <label for="">Other</label>
+        <label for="other">Other</label>
 
         </div>
 
@@ -51,13 +51,13 @@ const Onboarding = () => {
       <div className="radio">
 
         <input type="radio" id="men" name="interested-in" />
-        <label for="">Men</label>
+        <label for="men">Men</label>
         
         <input type="radio" id="women" name="interested-in" />
-        <label for="">Women</label>
+        <label for="women">Women</label>
         
         <input type="radio" id="everyone" name="interested-in" />
-        <label for="">Everyone</label>
+        <label for="everyone">Everyone</label>
         
         </div>
 

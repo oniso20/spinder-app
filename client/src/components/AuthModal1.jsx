@@ -55,7 +55,7 @@ const AuthModal1 = ({ setShowModal, setIsSignUp, isSignUp }) => {
         <span className="closeIcon">&otimes;</span>
       </div>
       <div className="text-area">
-        <h4 className="h4">{isSignUp ? "CREATE ACCOUNT" : "LOG IN"}</h4>
+        <h4 className="h4">{isSignUp ? "CREATE AN ACCOUNT" : "LOG IN"}</h4>
       </div>
       <form className="form-signup" onSubmit={handleSubmit}>
         <input
