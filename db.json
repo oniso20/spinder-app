@@ -1,0 +1,25 @@
+{
+  "_id": { "$oid": "636d1aad6f3f5a70e557a196" },
+  "user_id": "test-1",
+  "hashed_password": null,
+  "first_name": "John",
+  "last_name": "Doe",
+  "dob_day": { "$numberInt": "2" },
+  "dob_month": { "$numberInt": "11" },
+  "dob_year": { "$numberInt": "1998" },
+  "show_gender": true,
+  "gender_identity": "man",
+  "gender_interest": "women",
+  "email": "john22@test.com",
+  "url": "https://imgur.com/Q9WPlWA.jpg",
+  "about": "I love travelling and ski diving",
+  "fav_music": [
+    { "artist": "Drake", "rank": { "$numberInt": "1" } },
+    { "artist": "Kanye West", "rank": { "$numberInt": "2" } }
+  ],
+  "matches": [
+    { "user_id": "test-2", "type": "fav_music" },
+    { "user_id": "test-3", "type": "gender_interest" },
+    { "user_id": "test-4", "type": "gender_interest" }
+  ]
+}
