@@ -65,7 +65,7 @@
 .form-cont input[type="text"] {
     display: block;
     width: 230px;
-    padding: 0.9rem;
+    padding: 0.5rem;
     border-radius: 0.5rem;
     border: none;
     background-color: rgba(255, 255, 255, 0.685);

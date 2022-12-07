@@ -88,8 +88,8 @@ const AuthModal1 = ({ setShowModal, setIsSignUp, isSignUp }) => {
             onChange={(event) => setConfirmPassword(event.target.value)}
           />
         )}
-
-        <button>Sign Up</button>
+        {isSignUp ? <button>Sign Up</button> : <button>Log In</button>}
+        
         <p>{error}</p>
       </form>
     </div>

@@ -1,15 +1,16 @@
 .auth-modal-container {
-    /* display: flex;
-    flex-direction: column; */
-    margin: 0 auto;
-    margin-top: 10%;
     z-index: 99;
-    width: 40vw;
+    width: 30vw;
     max-width: 40vw;
-    height: 60vh;
+    height: 65vh;
     background: linear-gradient(to right, #DA22FF 0%, #9733EE  41%, #DA22FF  100%); 
     border-radius: 1rem;
     color: var(--white-color);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
 }
 
 .auth-modal {
@@ -43,15 +44,20 @@
 
 .form-signup > input {
     margin: 0.8rem;
-    padding: 1rem;
+    padding: 0.7rem;
     border-radius: 5px;
     border: none;
     width: 200px;
 }
 
-.form-signup > input[type="submit"] {
+/* .form-signup > input[type="submit"] {
     background: linear-gradient(to right, #DA22FF 0%, #9733EE  41%, #DA22FF  100%);
     border: 1px solid var(--white-color);
+} */
+
+.form-signup button {
+    width: 200px;
+    margin: 1rem;
 }
 
 .overlay {

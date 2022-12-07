@@ -15,6 +15,10 @@
   overscroll-behavior: none;
 }
 
+body {
+  overflow: hidden;
+}
+
 html {
   background: url(../assets/abstract-purple2.jpg);
   background-position: top;
@@ -62,16 +66,16 @@ html {
 
   width: 35vw;
   height: 60vh;
-  margin: 7% 0 0 15%;
+  margin: 7% 0 0 10%;
 }
 
 .intro-img {
   position: relative;
-  /* max-width: 65vw; */
+  max-width: 65vw;
   margin: 0 auto;
-  width: 45vw;
+  width: 50vw;
   height: 80vh;
-  margin: 5% 0 0 0;
+  margin: 5% 0 0 10%;
 }
 
 .couple-img,
@@ -112,7 +116,8 @@ html {
 button {
   background-image: linear-gradient(to right, #DA22FF 0%, #9733EE 41%, #DA22FF 100%);
   padding: 15px;
-  width: fit-content;
+  /* width: fit-content; */
+  width: 150px;
   text-align: center;
   text-transform: uppercase;
   transition: 0.5s;
@@ -133,5 +138,5 @@ button:hover {
 }
 
 .btns {
-  margin: 5rem 0 0 2rem;
+  margin: 3rem 0 0 1.5rem;
 }
