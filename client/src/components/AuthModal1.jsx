@@ -39,7 +39,7 @@ const AuthModal1 = ({ setShowModal, setIsSignUp, isSignUp }) => {
           }
         );
 
-        setCookie("Email", response.data.email);
+        // setCookie("Email", response.data.email);
         setCookie("UserId", response.data.userId);
         setCookie("AuthToken", response.data.token);
 
