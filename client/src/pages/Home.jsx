@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
-import Nav from "../components/Nav";
 import AuthModal1 from "../components/AuthModal1";
+
 
 import "../styles/Home.css";
 import coupleImg from "../assets/purplebg.jpg";
@@ -34,9 +34,13 @@ const Home = () => {
 
         <h3>Welcome to Spinder!</h3>
         <p>
-          Connect throught music! <br /> some intro text about Spinder and all
-          blaa blaa
+          Connect through music! <br /> 
+          Looking for a gig buddy? Someone to take road trips with without having to argue over the playlist? <br />
+          Maybe something more? <br />
+          <br />
+          This is the place for you. 
         </p>
+
 
         <div className="btns">
           <button onClick={handleClick}>SIGN UP</button>
@@ -44,6 +48,7 @@ const Home = () => {
         </div>
       </div>
 
+    
       {showModal && (
         <AuthModal1
           setShowModal={setShowModal}
@@ -57,8 +62,8 @@ const Home = () => {
         <img className="couple2-img" src={couple2Img} alt="couple-img" />
         <img className="couple3-img" src={couple3Img} alt="couple-img" />
       </div>
-
-    </div>
+     </div>
+   
   );
 };
 
