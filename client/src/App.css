@@ -134,3 +134,10 @@ button:hover {
 .btns {
   margin: 5rem 0 0 2rem; 
 }
+
+.spotify-auth {
+  width: 30vw;
+  height: 50vh;
+  background-color: var(--white-color);
+  border: 1px solid white;
+}

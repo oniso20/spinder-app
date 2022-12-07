@@ -9,7 +9,7 @@ const ChatContainer = () => {
     <div className="wrapper">
       <Nav />
       <div className="intro-text">
-             <h1>Chats</h1>
+             {/* <h2>Chat</h2> */}
         <div className="chat-container">
             <div className="chat-profilesContainer">
             <ChatsHeader  /> 

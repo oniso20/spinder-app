@@ -1,19 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Ubuntu&display=swap');
- 
+
 :root {
   --main-font: 'Ubuntu', sans-serif;
   --logo-font: 'Lobster', cursive;
   --white-color: #fdfdfde2;
   --purple: #DA22FF;
   --dark-purple: #9733EE;
-} 
+}
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   overscroll-behavior: none;
-} 
+}
+
+body {
+  overflow: hidden;
+}
 
 html {
   background: url(../assets/abstract-purple2.jpg);
@@ -62,18 +66,16 @@ html {
 
   width: 35vw;
   height: 60vh;
-  margin: 7% 0 0 15%;
-  /* border: 1px solid white; */
+  margin: 7% 0 0 10%;
 }
 
 .intro-img {
   position: relative;
-  /* overflow: hidden; */
-  max-width: 600px;
+  max-width: 65vw;
   margin: 0 auto;
-  width: 45vw;
+  width: 50vw;
   height: 80vh;
-  margin: 5% 0 0 0;
+  margin: 5% 0 0 10%;
 }
 
 .couple-img,
@@ -114,7 +116,8 @@ html {
 button {
   background-image: linear-gradient(to right, #DA22FF 0%, #9733EE 41%, #DA22FF 100%);
   padding: 15px;
-  width: fit-content;
+  /* width: fit-content; */
+  width: 150px;
   text-align: center;
   text-transform: uppercase;
   transition: 0.5s;
@@ -135,5 +138,5 @@ button:hover {
 }
 
 .btns {
-  margin: 5rem 0 0 2rem;
+  margin: 3rem 0 0 1.5rem;
 }

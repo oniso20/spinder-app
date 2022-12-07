@@ -31,18 +31,22 @@ const AuthModal1 = ({ setShowModal, setIsSignUp, isSignUp }) => {
 
         return;
       } else {
-        const response = await axios.post("http://localhost:8000/signup", {
-          email,
-          password,
-        });
+        const response = await axios.post(
+          `http://localhost:8000/${isSignUp ? "signup" : "login"}`,
+          {
+            email,
+            password,
+          }
+        );
 
-        setCookie("Email", response.data.email);
+        // setCookie("Email", response.data.email);
         setCookie("UserId", response.data.userId);
         setCookie("AuthToken", response.data.token);
 
         const success = response.status === 201;
 
-        if (success) navigate("/onboarding");
+        if (success && isSignUp) navigate("/onboarding");
+        if (success && !isSignUp) navigate("/dashboard");
       }
     } catch (error) {
       console.log(error);
@@ -55,7 +59,7 @@ const AuthModal1 = ({ setShowModal, setIsSignUp, isSignUp }) => {
         <span className="closeIcon">&otimes;</span>
       </div>
       <div className="text-area">
-        <h4 className="h4">{isSignUp ? "CREATE ACCOUNT" : "LOG IN"}</h4>
+        <h4 className="h4">{isSignUp ? "CREATE AN ACCOUNT" : "LOG IN"}</h4>
       </div>
       <form className="form-signup" onSubmit={handleSubmit}>
         <input
@@ -84,8 +88,8 @@ const AuthModal1 = ({ setShowModal, setIsSignUp, isSignUp }) => {
             onChange={(event) => setConfirmPassword(event.target.value)}
           />
         )}
-
-        <input className="submit-button" type="submit" />
+        {isSignUp ? <button>Sign Up</button> : <button>Log In</button>}
+        
         <p>{error}</p>
       </form>
     </div>
