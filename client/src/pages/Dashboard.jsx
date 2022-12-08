@@ -1,45 +1,43 @@
 import React, { useState } from "react";
-import MatchCard from 'react-tinder-card';
+import MatchCard from "react-tinder-card";
 import ChatContainer from "../components/ChatContainer";
 import Nav from "../components/Nav";
 
 const Dashboard = () => {
+  const characters = [
+    {
+      name: "Richard Hendricks",
+      url: "https://1fid.com/wp-content/uploads/2022/06/Twitter-profile-picture-1024x1022.jpg",
+    },
+    {
+      name: "Erlich Bachman",
+      url: "https://1fid.com/wp-content/uploads/2022/06/Twitter-profile-picture-1024x1022.jpg",
+    },
+    {
+      name: "Monica Hall",
+      url: "https://1fid.com/wp-content/uploads/2022/06/Twitter-profile-picture-1024x1022.jpg",
+    },
+    {
+      name: "Jared Dunn",
+      url: "https://1fid.com/wp-content/uploads/2022/06/Twitter-profile-picture-1024x1022.jpg",
+    },
+    {
+      name: "Dinesh Chugtai",
+      url: "https://1fid.com/wp-content/uploads/2022/06/Twitter-profile-picture-1024x1022.jpg",
+    },
+  ];
 
-const characters = [
-  {
-    name: 'Richard Hendricks',
-    url: 'https://1fid.com/wp-content/uploads/2022/06/Twitter-profile-picture-1024x1022.jpg'
-  },
-  {
-    name: 'Erlich Bachman',
-    url: 'https://1fid.com/wp-content/uploads/2022/06/Twitter-profile-picture-1024x1022.jpg'
-  },
-  {
-    name: 'Monica Hall',
-    url: 'https://1fid.com/wp-content/uploads/2022/06/Twitter-profile-picture-1024x1022.jpg'
-  },
-  {
-    name: 'Jared Dunn',
-    url: 'https://1fid.com/wp-content/uploads/2022/06/Twitter-profile-picture-1024x1022.jpg'
-  },
-  {
-    name: 'Dinesh Chugtai',
-    url: 'https://1fid.com/wp-content/uploads/2022/06/Twitter-profile-picture-1024x1022.jpg'
-  }
-]
+  const [lastDirection, setLastDirection] = useState();
 
+  const swiped = (direction, nameToDelete) => {
+    console.log("removing: " + nameToDelete);
+    setLastDirection(direction);
+  };
 
-const [lastDirection, setLastDirection] = useState()
+  const outOfFrame = (name) => {
+    console.log(name + " left the screen!");
+  };
 
-const swiped = (direction, nameToDelete) => {
-  console.log('removing: ' + nameToDelete)
-  setLastDirection(direction)
-}
-
-const outOfFrame = (name) => {
-  console.log(name + ' left the screen!')
-}
-  
   return (
     <div className="dashboardContainer">
       <Nav />

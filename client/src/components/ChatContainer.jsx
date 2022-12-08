@@ -6,11 +6,11 @@ import ChatsDisplay from "./ChatsDisplay";
 const ChatContainer = () => {
   return (
         <div className="chat-container">
-            <ChatsHeader  /> 
+            <ChatsHeader />
             <div>
-                <button className="option">Matches</button>
-                <button className="option">Chat</button>
-            </div>    
+              <button className="option">Matches</button>
+              <button className="option">Chat</button>
+            </div>
             <MatchesDisplay />
             <ChatsDisplay />
             </div>
