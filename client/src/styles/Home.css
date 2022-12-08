@@ -15,10 +15,6 @@
   overscroll-behavior: none;
 }
 
-body {
-  overflow: hidden;
-}
-
 html {
   background: url(../assets/abstract-purple2.jpg);
   background-position: top;
@@ -85,7 +81,6 @@ html {
   border-radius: 74% 26% 77% 23% / 44% 60% 40% 56%;
   opacity: 0.8;
 }
-
 
 .couple-img {
   transform: rotate(9deg);

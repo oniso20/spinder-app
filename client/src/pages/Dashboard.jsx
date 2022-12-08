@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import MatchCard from 'react-tinder-card';
 import ChatContainer from "../components/ChatContainer";
+import Nav from "../components/Nav";
 
 const Dashboard = () => {
 
@@ -41,14 +42,14 @@ const outOfFrame = (name) => {
   
   return (
     <div className="dashboardContainer">
-    <div className="dashboardHeader">
-      <h1>Dashboard </h1>
-      <h2>Name : </h2>
-      <h2>Email : </h2>
-      <button>Log out</button> 
-    </div>
+      <Nav />
+      <div className="dashboard-headline">
+      <h1>Chat</h1> 
+      </div>
     <div className="dashboard" >
+      <div className="profile-container">
       <ChatContainer/> 
+      </div>
       <div className="swipe-container">
         <div className="card-container">
         {characters.map((character) =>
@@ -66,7 +67,7 @@ const outOfFrame = (name) => {
           {lastDirection ? <p>You swiped {lastDirection}</p> : <p/>}
        </div>
        </div>
-      </div>
+       </div>
     </div>
     </div>
   );
