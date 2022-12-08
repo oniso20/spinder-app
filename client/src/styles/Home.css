@@ -15,9 +15,10 @@
   overscroll-behavior: none;
 }
 
-body {
+/* Please do not hide overflow until we are done with styling */
+/* body {
   overflow: hidden;
-}
+} */
 
 html {
   background: url(../assets/abstract-purple2.jpg);

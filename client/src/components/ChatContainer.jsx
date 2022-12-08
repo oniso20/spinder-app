@@ -7,26 +7,25 @@ import ChatsDisplay from "./ChatsDisplay";
 const ChatContainer = () => {
   return (
     <div className="chat-wrapper">
-      <Nav />
+      {/* <Nav /> */}
       <div className="chat-headline">
-             <h1>Chat</h1> 
+        <h1>Chat</h1>
         <div className="chat-container">
-            <div className="chat-profilesContainer">
-            <ChatsHeader  /> 
+          <div className="chat-profilesContainer">
+            <ChatsHeader />
             <div>
-                <button className="option">Matches</button>
-                <button className="option">Chat</button>
-            </div>    
+              <button className="option">Matches</button>
+              <button className="option">Chat</button>
+            </div>
             <MatchesDisplay />
             <ChatsDisplay />
-            </div>
-            <div className="chat-displayContainer">
+          </div>
+          <div className="chat-displayContainer">
             <h2>Chat Display</h2>
-            </div>
+          </div>
         </div>
       </div>
-      </div>
-
+    </div>
   );
 };
 

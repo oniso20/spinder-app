@@ -1,19 +1,19 @@
 /*------ Chat Container -----*/
 
-.chat-wrapper{
+.chat-wrapper {
     height: 100vh;
 }
 
-.chat-headline h1{ 
-  font-family: var(--logo-font);
-  font-size: 5rem;
-  color: #fdfdfd;
-  margin: 0 0 0 15%;
-  display: inline-block;
-  letter-spacing: 3px;
+.chat-headline h1 {
+    font-family: var(--logo-font);
+    font-size: 5rem;
+    color: #fdfdfd;
+    margin: 0 0 0 15%;
+    display: inline-block;
+    letter-spacing: 3px;
 }
 
-.chat-container{
+.chat-container {
     width: 30vw;
     height: 82vh;
     background-color: rgba(255, 255, 255, 0.39);
@@ -22,32 +22,36 @@
     display: flex;
     flex-direction: row;
 }
-.chat-profilesContainer{
+
+.chat-profilesContainer {
     text-align: left;
     height: inherit;
     width: 30vw;
-    
+
 }
-.chat-container .chat-container-header{
-   background: linear-gradient(45deg, rgb(254, 48,114), rgb(255, 89, 64));
-   height: 10vh;
-   width: 100%;
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
+
+.chat-container .chat-container-header {
+    background: linear-gradient(45deg, rgb(254, 48, 114), rgb(255, 89, 64));
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-.chat-container .option:disabled{
+
+.chat-container .option:disabled {
     border-bottom: 1px solid rgb(187, 187, 187);
 }
+
 .chat-container .profile,
-.chat-container .log-out-icon{
+.chat-container .log-out-icon {
     display: flex;
     align-items: center;
     padding: 20px;
     color: rgb(255, 255, 255);
 }
 
-.img-container{
+.img-container {
     height: 30px;
     width: 30px;
     border-radius: 15px;
@@ -55,26 +59,26 @@
     margin: 10px;
 }
 
-.img-container img{
+.img-container img {
     width: 100%;
-} 
+}
 
-/*------Chat Display -------*/
-
-.chat-displayContainer{
+/* ------Chat Display ------- */
+.chat-displayContainer {
     text-align: center;
     height: inherit;
     width: 70vw;
 
 }
-.chat-displayContainer h2{
+
+.chat-displayContainer h2 {
     text-align: center;
     width: 100%;
     background-color: blue;
 
 }
 
-.chat-input{
+.chat-input {
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -84,7 +88,7 @@
 
 .swipe {
     position: absolute;
-  }
+}
 
 .dashboard {
     display: flex;
@@ -103,23 +107,24 @@
 .dashboard .card-container {
     width: 400px;
     height: 650px;
-  }
-  
-  .card {
-    /* width: 400px; height: 650px; */
+}
+
+.card {
+    width: 400px;
+    height: 650px;
     background-color: #fff;
     width: 400px;
     height: 650px;
     border-radius: 30px;
     background-size: cover;
     background-position: center;
-  }
-  
-  .card h3 {
-    margin-top: 0;
-  }
+}
 
-  .dashboard .swipe-info {
+.card h3 {
+    margin-top: 0;
+}
+
+.dashboard .swipe-info {
     position: absolute;
     bottom: 0;
     padding: 5px;
@@ -131,4 +136,3 @@
     align-content: center;
     flex-direction: row;
 }
-
