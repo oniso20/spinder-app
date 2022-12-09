@@ -174,15 +174,15 @@ const Onboarding = () => {
               />
               <label htmlFor="other-gender-identity">Other</label>
             </div>
-            <label htmlFor="show_gender">Show Gender on my Profile</label>
+           
             <input
               id="show_gender"
               type="checkbox"
               name="show_gender"
               onChange={handleChange}
               checked={formData.show_gender}
-            />
-            <label>Show Me</label>
+            /><label htmlFor="show_gender">Show Gender on my Profile</label>
+            {/* <label>Show Me</label> */}
             <small>Interested in</small>
             <div className="radio">
               <input
@@ -329,11 +329,29 @@ const Onboarding = () => {
               <label htmlFor="">10s</label>
             </div>
 
+            <section className="photo-upload">
+              <div>
+                <label htmlFor="url">Profile Photo</label>
+                <input
+                type="url"
+                name="url"
+                id="url"
+                onChange={handleChange}
+                required={true}/>
+              </div>
+
+              <div className="photo-container">
+                {formData.url && (
+                <img src={formData.url} alt="profile pic preview" />
+              )}
+              </div>
+          </section>
+
             <button type="submit">Submit</button>
           </div>
         </form>
 
-        <section>
+        {/* <section>
           <label htmlFor="url">Profile Photo</label>
           <input
             type="url"
@@ -347,7 +365,7 @@ const Onboarding = () => {
               <img src={formData.url} alt="profile pic preview" />
             )}
           </div>
-        </section>
+        </section> */}
       </div>
     </>
   );

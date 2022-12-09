@@ -1,0 +1,21 @@
+.dash-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 5%;
+}
+
+.dash-info h3 {
+    margin-left: 5rem;
+    display: inline-block;
+}
+
+.dash-info button {
+    width: 120px;
+    padding: 0.5rem;
+    position: absolute;
+    top: -1rem;
+    right: -1rem;
+}
+

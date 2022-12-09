@@ -1,5 +1,6 @@
 import React from "react";
-import './Nav.css';
+import '../styles/Nav.css';
+
 import homeImg from '../assets/home.svg';
 import searchImg from '../assets/search.svg';
 import profileImg from '../assets/portrait.svg';

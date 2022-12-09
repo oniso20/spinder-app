@@ -1,10 +1,10 @@
 import React from "react";
-// import ProfileCard from "../components/ProfileCard";
+import ProfileCard from "../components/ProfileCard";
 import Nav from '../components/Nav';
 
 import '../styles/dashboard.css';
 
-const Dashboard = () => {
+const Whatever = () => {
   return (
     <>
     <div className="dash-info">
@@ -14,8 +14,11 @@ const Dashboard = () => {
       <button>Log out</button>
     </div>
 
+    <div className="main-dash">
+      <ProfileCard />
+    </div>
     </>
   );
 };
 
-export default Dashboard;
+export default Whatever;
