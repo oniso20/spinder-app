@@ -1,4 +1,5 @@
 import React from "react";
+import { useCookies } from "react-cookie";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -14,7 +15,9 @@ import Whatever from "./pages/Whatever";
 // import { useState } from "react";
 
 const App = () => {
-  // const { user, loading, error } = useUserContext();
+  const [cookies, setCookie, removeCookie] = useCookies(["user"]);
+
+  const authToken = cookies.AuthToken;
 
   return (
     <>
@@ -22,16 +25,16 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Layout />} />
           <Route index element={<Home />} />
-          <Route path="/onboarding" element={<Onboarding />} />
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/whatever" element={<Whatever />} />
+          {authToken && <Route path="/onboarding" element={<Onboarding />} />}
+          {authToken && <Route path="/dashboard" element={<Dashboard />} />}
+          {authToken && <Route path="/whatever" element={<Whatever />} />}
           <Route path="/chatcontainer" element={<ChatContainer />} />
-  
+
           {/* <Route path="/auth" element={<AuthModal1 />} /> */}
         </Routes>
       </BrowserRouter>
     </>
   );
-}
+};
 
 export default App;

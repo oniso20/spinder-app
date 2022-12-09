@@ -89,6 +89,25 @@ app.post('/signup', async (req, res) => {
 
 });
 
+app.get('/user/:userId', async (req, res) => {
+    const client = new MongoClient(uri);
+    const userId = req.params.userId;
+
+    try {
+        await client.connect();
+        const database = client.db('spinder-data');
+        const users = database.collection('users');
+
+        console.log('userId', userId);
+
+        const query = { user_id: userId };
+        const user = await users.findOne(query);
+        res.send(user);
+    } finally {
+        await client.close();
+    }
+});
+
 app.get('/users', async (req, res) => {
     const client = new MongoClient(uri);
 
