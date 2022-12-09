@@ -12,8 +12,8 @@ const [userData, setUserData] = useState([]);
 
 useEffect(() => {
   axios.get('http://localhost:8000/users')
-  .then((res) => setUserData(res.userData));
-  // console.log(userData);
+  .then((res) => console.log(res.data))
+  // console.log(res);
 },[]);
 
 

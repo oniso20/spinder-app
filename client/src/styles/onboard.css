@@ -5,6 +5,7 @@
     background-color: rgba(255, 255, 255, 0.39);
     margin: 0 auto;
     margin-top: 2%;
+    margin-bottom: 2%;
     border-radius: 1rem;
     display: flex;
     justify-content: space-around;
@@ -151,4 +152,11 @@ textarea:focus {
     background-color: rgba(255, 255, 255, 0.685);
     font-family: var(--main-font);
     display: block;
+    margin: 0 0 2rem 0;
+}
+
+.photo-container img {
+    width: 200px;
+    height: auto;
+    margin: 0 5rem 0 5rem;
 }
