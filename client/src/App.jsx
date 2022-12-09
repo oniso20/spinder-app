@@ -7,6 +7,7 @@ import Home from "./pages/Home";
 import Layout from "./pages/Layout";
 import Onboarding from "./pages/Onboarding";
 import ChatContainer from "./components/ChatContainer";
+import Whatever from "./pages/Whatever";
 // import AuthModal1 from "./components/AuthModal1";
 // import Auth from "./components/Auth";
 // import { useUserContext } from "./context/UserContext";
@@ -23,6 +24,7 @@ const App = () => {
           <Route index element={<Home />} />
           <Route path="/onboarding" element={<Onboarding />} />
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/whatever" element={<Whatever />} />
           <Route path="/chatcontainer" element={<ChatContainer />} />
   
           {/* <Route path="/auth" element={<AuthModal1 />} /> */}

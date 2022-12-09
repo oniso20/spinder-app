@@ -1,31 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Ubuntu&display=swap');
-
-:root {
-    --main-font: 'Ubuntu', sans-serif;
-    --logo-font: 'Lobster', cursive;
-    --white-color: #fdfdfde2;
-    --purple: #DA22FF;
-    --dark-purple: #9733EE;
-  }
-
 body {
-    font-family: 'Ubuntu', sans-serif;
-    color:rgba(255, 255, 255, 0.913);
+    color: var(--white-color);
 }
 
 h3 {
     margin: 1rem;
     font-size: 1.2rem;
+    text-transform: capitalize;
 }
 
-p {
+.profile-card p {
     margin: 1rem;
     line-height: 1rem;
+    display: block;
 }
 
 .profile-card {
-    width: 400px;
-    height: 500px;
+    width: 500px;
+    height: 650px;
     border-radius: 1rem;
     background-color: rgba(240, 255, 255, 0.336);
     margin: 0 auto;
@@ -43,10 +34,10 @@ p {
 }
 
 .music-data-box {
-    width: 398px;
-    height: 250px;
+    width: 498px;
+    height: 370px;
     border-radius: 1rem;
-    /* border: 1px solid white; */
+    border: 1px solid white;
     position: absolute;
     bottom: 0;
 }
@@ -62,4 +53,5 @@ p {
 
 .icons-box img {
     padding: 2px;
+    filter: invert();
 }

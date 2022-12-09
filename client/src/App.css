@@ -15,99 +15,34 @@
   overscroll-behavior: none;
 }
 
-html {
+body {
   background: url(imgs/abstract-purple2.jpg);
-  background-position: top;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  height: 100%;
+  background-attachment: fixed;
 }
 
 h1 {
   font-family: var(--logo-font);
   font-size: 5rem;
   color: #fdfdfd;
-  margin: 0 0 0 5%;
-  display: inline-block;
-  letter-spacing: 3px;
+  letter-spacing: 5px;
 }
 
 h3 {
   font-family: var(--main-font);
-  margin: 7% 0 0 5%;
   color: var(--white-color);
-  font-size: 2rem;
-  letter-spacing: 3px;
   display: inline-block;
 }
 
 p {
   font-family: var(--main-font);
-  margin: 10% 0 0 5%;
   color: var(--white-color);
-  font-size: 1rem;
-  letter-spacing: 1px;
-  display: inline-block;
-  line-height: 1.5rem;
 }
 
-/* IMAGES */
-
-.wrapper {
-  display: flex;
-}
-
-.intro-text {
-  
-  width: 35vw;
-  height: 60vh;
-  margin: 7% 0 0 15%;
-  /* border: 1px solid white; */
-}
-
-.intro-img {
-  position: relative;
-  /* overflow: hidden; */
-  max-width: 600px;
-  margin: 0 auto;
-  width: 45vw;
-  height: 80vh;
-  margin: 5% 0 0 0;
-}
-
-.couple-img,
-.couple2-img,
-.couple3-img {
-  width: 400px;
-  border-radius: 74% 26% 77% 23% / 44% 60% 40% 56% ;
-  opacity: 0.8;
-}
-
-
-.couple-img {
-  transform: rotate(9deg);
-  position: absolute;
-  top: 0;
-  left: 7%;
-}
-
-.couple2-img {
-  transform: rotate(-5deg);
-  position: absolute;
-  top: 25%;
-  left: -10%;
-  z-index: 1;
-
-}
-
-.couple3-img {
-  transform: rotate(25deg);
-  position: absolute;
-  top: 45%;
-  left: 10%;
-  z-index: 0;
-}
-
-/* BUTTONS */
+/* BUTTON STYLE */
 
 button {
   background-image: linear-gradient(to right, #DA22FF 0%, #9733EE  41%, #DA22FF  100%);
@@ -116,13 +51,12 @@ button {
   text-align: center;
   text-transform: uppercase;
   transition: 0.5s;
-  background-size: 200% auto;
+  /* background-size: 200% auto; */
   color: white;            
   border-radius: 10px;
   border: none;
   font-family: var(--main-font);
-  letter-spacing: 3px;
-  margin: 2rem 2rem 0 0;
+  letter-spacing: 2px;
 }
 
 button:hover {
@@ -131,13 +65,9 @@ button:hover {
   text-decoration: none;
 }
 
-.btns {
-  margin: 5rem 0 0 2rem; 
-}
-
-.spotify-auth {
+/* .spotify-auth {
   width: 30vw;
   height: 50vh;
   background-color: var(--white-color);
   border: 1px solid white;
-}
+} */
