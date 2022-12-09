@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Ubuntu&display=swap');
 
 body {
-    font-family: 'Ubuntu', sans-serif;
+    font-family: var(--main-font);
 }
 
 nav h2 {
     font-family: 'Lobster', cursive;
     font-size: 3rem;
-    color:rgb(224, 221, 221);
+    color: var(--white-color);
 }
 
 nav ul {
@@ -18,6 +18,7 @@ nav ul {
     top: 0;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 nav li {
@@ -27,27 +28,24 @@ nav li {
     transform: translateY(55px);
     text-align: center;
     cursor: pointer;
-    
 }
 
 nav a {
-    color: rgb(224, 221, 221);
     text-decoration: none;
     padding: 10px 10px;
 }
 
 .icon {
-    width: 30px;
+    width: 1.8rem;
 }
 
 .icon:hover {
-    transform: scale(1.3);
-    filter:invert(1);
+    transform: scale(1.2);
+    filter:invert(1) drop-shadow(0.5rem 0.5rem 0.5rem rgb(0, 0, 0));
 }
 
 nav li:hover img, .active img {
-    filter: drop-shadow(0.5rem 0.5rem 0.5rem rgb(255, 255, 255));
-    filter:invert(1);
+    filter: invert(1) drop-shadow(0.5rem 0.5rem 0.5rem rgb(0, 0, 0));
 }
 
 nav img {

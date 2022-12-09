@@ -10,7 +10,6 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
 }
 
 .auth-modal {
@@ -50,10 +49,9 @@
     width: 200px;
 }
 
-/* .form-signup > input[type="submit"] {
-    background: linear-gradient(to right, #DA22FF 0%, #9733EE  41%, #DA22FF  100%);
-    border: 1px solid var(--white-color);
-} */
+.form-signup input::placeholder {
+    font-family: var(--main-font);
+}
 
 .form-signup button {
     width: 200px;

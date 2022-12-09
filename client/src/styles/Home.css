@@ -15,17 +15,18 @@
   overscroll-behavior: none;
 }
 
-=======
 /* Please do not hide overflow until we are done with styling */
 /* body {
   overflow: hidden;
 } */
+
 
 html {
   background: url(../assets/abstract-purple2.jpg);
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
 }
 
 .wrapper h1 {
@@ -34,7 +35,7 @@ html {
   color: #fdfdfd;
   margin: 0 0 0 5%;
   display: inline-block;
-  letter-spacing: 2px;
+  letter-spacing: 4px;
 }
 
 .wrapper h3 {
@@ -42,7 +43,7 @@ html {
   margin: 7% 0 0 5%;
   color: var(--white-color);
   font-size: 2rem;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
   display: inline-block;
 }
 
@@ -117,7 +118,6 @@ html {
 button {
   background-image: linear-gradient(to right, #DA22FF 0%, #9733EE 41%, #DA22FF 100%);
   padding: 15px;
-  /* width: fit-content; */
   width: 150px;
   text-align: center;
   text-transform: uppercase;
@@ -126,8 +126,8 @@ button {
   color: white;
   border-radius: 10px;
   border: none;
-  font-family: var(--main-font);
-  letter-spacing: 3px;
+  font-family: var(--main-font); 
+  letter-spacing: 2px;
   margin: 2rem 2rem 0 0;
 }
 
