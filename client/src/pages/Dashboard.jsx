@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import MatchCard from "react-tinder-card";
 import ChatContainer from "../components/ChatContainer";
+import Nav from "../components/Nav";
 
 const Dashboard = () => {
   const characters = [
@@ -39,31 +40,33 @@ const Dashboard = () => {
 
   return (
     <div className="dashboardContainer">
-      <div className="dashboard">
-        <ChatContainer />
-        <div className="swipe-container">
-          <div className="card-container">
-            {characters.map((character) => (
-              <MatchCard
-                className="swipe"
-                key={character.name}
-                onSwipe={(dir) => swiped(dir, character.name)}
-                onCardLeftScreen={() => outOfFrame(character.name)}
-              >
-                <div
-                  style={{ backgroundImage: "url(" + character.url + ")" }}
-                  className="card"
-                >
-                  <h3>{character.name}</h3>
-                </div>
-              </MatchCard>
-            ))}
-            <div className="swipe-info">
-              {lastDirection ? <p>You swiped {lastDirection}</p> : <p />}
-            </div>
-          </div>
-        </div>
+      <Nav />
+      <div className="dashboard-headline">
+      <h1>Chat</h1> 
       </div>
+    <div className="dashboard" >
+      <div className="profile-container">
+      <ChatContainer/> 
+      </div>
+      <div className="swipe-container">
+        <div className="card-container">
+        {characters.map((character) =>
+          <MatchCard 
+          className='swipe' 
+          key={character.name} onSwipe={(dir) => swiped(dir, character.name)} 
+          onCardLeftScreen={() => outOfFrame(character.name)}>
+          <div style={{ backgroundImage: 'url(' + character.url + ')' }} 
+          className='card'>
+              <h3>{character.name}</h3>
+            </div>
+          </MatchCard>
+        )}
+        <div className="swipe-info">
+          {lastDirection ? <p>You swiped {lastDirection}</p> : <p/>}
+       </div>
+       </div>
+       </div>
+    </div>
     </div>
   );
 };

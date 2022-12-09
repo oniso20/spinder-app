@@ -1,43 +1,101 @@
-/*------ Chat Container -----*/
 
-.chat-wrapper {
+/* Dashboard */
+.swipe {
+    position: absolute;
+  }
+
+  .dashboardContainer {
     height: 100vh;
-}
+  } 
 
-.chat-headline h1 {
+  .dashboard {
+    width: 70vw;
+    height: 82vh;
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    border: 1px solid;
+    border-radius: 1.5rem; 
+  }
+
+  .dashboard-headline h1{ 
     font-family: var(--logo-font);
     font-size: 5rem;
     color: #fdfdfd;
     margin: 0 0 0 15%;
     display: inline-block;
     letter-spacing: 3px;
-}
+  }
 
-.chat-container {
+  .dashboard .profile-container{
     width: 30vw;
-    height: 82vh;
-    background-color: rgba(255, 255, 255, 0.39);
-    margin: 0 auto;
-    border-radius: 1rem;
-    display: flex;
-    flex-direction: row;
-}
-
-.chat-profilesContainer {
-    text-align: left;
     height: inherit;
-    width: 30vw;
-
 }
 
-.chat-container .chat-container-header {
-    background: linear-gradient(45deg, rgb(254, 48, 114), rgb(255, 89, 64));
-    height: 10vh;
-    width: 100%;
+
+.dashboard .swipe-container {
+    background-color: rgba(255, 255, 255, 0.39);
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    width: 70vw;
+    height: inherit;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    height: inherit;
+    border-top-right-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
 }
+
+.dashboard .card-container {
+    width: 400px;
+    height: 650px;
+}
+  
+  .card {
+    background-color: #fff;
+    width: 400px;
+    height: 650px;
+    border-radius: 30px;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .card h3 {
+    margin-top: 0;
+    text-align: center;
+  }
+
+  .dashboard .swipe-info {
+    position: absolute;
+    bottom: 0;
+    padding: 150px;
+}
+
+/*------ Chat Container -----*/
+
+.chat-container{
+    background-color: rgba(255, 255, 255, 0.39);
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    width: 100%;
+    height: inherit;
+    text-align: left;
+    z-index: 1;
+    border-top-left-radius: 1.5rem;
+    border-bottom-left-radius: 1.5rem;
+}
+
+.chat-container .chat-container-header{
+   background: linear-gradient(45deg, rgb(254, 48,114), rgb(255, 89, 64));
+   height: 100px;
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   border-top-left-radius: 1.5rem;
+
 
 .chat-container .option:disabled {
     border-bottom: 1px solid rgb(187, 187, 187);
@@ -64,75 +122,15 @@
 }
 
 /* ------Chat Display ------- */
-.chat-displayContainer {
+.chat-display {
+    padding: 2rem;
+    height: 50vh;
+    overflow-y: auto;
     text-align: center;
-    height: inherit;
-    width: 70vw;
-
-}
-
-.chat-displayContainer h2 {
-    text-align: center;
-    width: 100%;
-    background-color: blue;
-
 }
 
 .chat-input {
-    padding: 20px;
+    padding: 2rem;
     display: flex;
     flex-direction: column;
-}
-
-/* Dashboard */
-
-.swipe {
-    position: absolute;
-}
-
-.dashboard {
-    display: flex;
-    justify-content: space-between;
-}
-
-.dashboard .swipe-container {
-    width: 70%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-.dashboard .card-container {
-    width: 400px;
-    height: 650px;
-}
-
-.card {
-    width: 400px;
-    height: 650px;
-    background-color: #fff;
-    width: 400px;
-    height: 650px;
-    border-radius: 30px;
-    background-size: cover;
-    background-position: center;
-}
-
-.card h3 {
-    margin-top: 0;
-}
-
-.dashboard .swipe-info {
-    position: absolute;
-    bottom: 0;
-    padding: 5px;
-}
-
-.dashboardHeader {
-    display: flex;
-    justify-content: space-evenly;
-    align-content: center;
-    flex-direction: row;
 }
