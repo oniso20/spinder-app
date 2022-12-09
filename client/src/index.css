@@ -30,8 +30,7 @@
   .dashboard .profile-container{
     width: 30vw;
     height: inherit;
-}
-
+  }
 
 .dashboard .swipe-container {
     background-color: rgba(255, 255, 255, 0.39);
@@ -51,7 +50,7 @@
 .dashboard .card-container {
     width: 400px;
     height: 650px;
-}
+  }
   
   .card {
     background-color: #fff;
@@ -95,21 +94,19 @@
    justify-content: space-between;
    align-items: center;
    border-top-left-radius: 1.5rem;
-
-
-.chat-container .option:disabled {
+}
+.chat-container .option:disabled{
     border-bottom: 1px solid rgb(187, 187, 187);
 }
-
 .chat-container .profile,
-.chat-container .log-out-icon {
+.chat-container .log-out-icon{
     display: flex;
     align-items: center;
     padding: 20px;
     color: rgb(255, 255, 255);
 }
 
-.img-container {
+.img-container{
     height: 30px;
     width: 30px;
     border-radius: 15px;
@@ -117,11 +114,12 @@
     margin: 10px;
 }
 
-.img-container img {
+.img-container img{
     width: 100%;
-}
+} 
 
-/* ------Chat Display ------- */
+/*------Chat Display -------*/
+
 .chat-display {
     padding: 2rem;
     height: 50vh;
@@ -129,8 +127,10 @@
     text-align: center;
 }
 
-.chat-input {
+.chat-input{
     padding: 2rem;
     display: flex;
     flex-direction: column;
 }
+
+
