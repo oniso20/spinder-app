@@ -47,6 +47,8 @@ const AuthModal1 = ({ setShowModal, setIsSignUp, isSignUp }) => {
 
         if (success && isSignUp) navigate("/onboarding");
         if (success && !isSignUp) navigate("/dashboard");
+
+        window.location.reload();
       }
     } catch (error) {
       console.log(error);
@@ -89,7 +91,7 @@ const AuthModal1 = ({ setShowModal, setIsSignUp, isSignUp }) => {
           />
         )}
         {isSignUp ? <button>Sign Up</button> : <button>Log In</button>}
-        
+
         <p>{error}</p>
       </form>
     </div>
