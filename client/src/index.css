@@ -1,136 +1,133 @@
-
 /* Dashboard */
 .swipe {
-    position: absolute;
-  }
+  position: absolute;
+}
 
-  .dashboardContainer {
-    height: 100vh;
-  } 
 
-  .dashboard {
-    width: 70vw;
-    height: 82vh;
-    display: flex;
-    flex-direction: row;
-    margin: 0 auto;
-    border: 1px solid;
-    border-radius: 1.5rem; 
-  }
+.dashboard {
+  width: 70vw;
+  height: 82vh;
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  border: 1px solid;
+  border-radius: 1.5rem;
+}
 
-  .dashboard-headline h1{ 
-    font-family: var(--logo-font);
-    font-size: 5rem;
-    color: #fdfdfd;
-    margin: 0 0 0 15%;
-    display: inline-block;
-    letter-spacing: 3px;
-  }
+.dashboard-headline h1 {
+  font-family: var(--logo-font);
+  font-size: 5rem;
+  color: #fdfdfd;
+  margin: 0 0 0 15%;
+  display: inline-block;
+  letter-spacing: 3px;
+}
 
-  .dashboard .profile-container{
-    width: 30vw;
-    height: inherit;
+.dashboard .profile-container {
+  width: 30vw;
+  height: inherit;
 }
 
 
 .dashboard .swipe-container {
-    background-color: rgba(255, 255, 255, 0.39);
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+  background-color: rgba(255, 255, 255, 0.39);
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
     rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
-    width: 70vw;
-    height: inherit;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: inherit;
-    border-top-right-radius: 1.5rem;
-    border-bottom-right-radius: 1.5rem;
+  width: 70vw;
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: inherit;
+  border-top-right-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
 }
 
 .dashboard .card-container {
-    width: 400px;
-    height: 650px;
+  width: 400px;
+  height: 650px;
 }
-  
-  .card {
-    background-color: #fff;
-    width: 400px;
-    height: 650px;
-    border-radius: 30px;
-    background-size: cover;
-    background-position: center;
-  }
-  
-  .card h3 {
-    margin-top: 0;
-    text-align: center;
-  }
 
-  .dashboard .swipe-info {
-    position: absolute;
-    bottom: 0;
-    padding: 150px;
+.card {
+  background-color: #fff;
+  width: 400px;
+  height: 650px;
+  border-radius: 30px;
+  background-size: cover;
+  background-position: center;
+}
+
+.card h3 {
+  margin-top: 0;
+  text-align: center;
+}
+
+.dashboard .swipe-info {
+  position: absolute;
+  bottom: 0;
+  padding: 150px;
 }
 
 /*------ Chat Container -----*/
 
-.chat-container{
-    background-color: rgba(255, 255, 255, 0.39);
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+.chat-container {
+  background-color: rgba(255, 255, 255, 0.39);
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
     rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
-    width: 100%;
-    height: inherit;
-    text-align: left;
-    z-index: 1;
-    border-top-left-radius: 1.5rem;
-    border-bottom-left-radius: 1.5rem;
+  width: 100%;
+  height: inherit;
+  text-align: left;
+  z-index: 1;
+  border-top-left-radius: 1.5rem;
+  border-bottom-left-radius: 1.5rem;
 }
 
 .chat-container .chat-container-header {
-   background: linear-gradient(45deg, rgb(254, 48,114), rgb(255, 89, 64));
-   height: 100px;
-   width: 100%;
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   border-top-left-radius: 1.5rem;
+  background: linear-gradient(45deg, rgb(254, 48, 114), rgb(255, 89, 64));
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top-left-radius: 1.5rem;
 }
 
 .chat-container .option:disabled {
-    border-bottom: 1px solid rgb(187, 187, 187);
+  border-bottom: 1px solid rgb(187, 187, 187);
 }
 
 .chat-container .profile,
 .chat-container .log-out-icon {
-    display: flex;
-    align-items: center;
-    padding: 20px;
-    color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  color: rgb(255, 255, 255);
 }
 
+
 .img-container {
-    height: 30px;
-    width: 30px;
-    border-radius: 15px;
-    overflow: hidden;
-    margin: 10px;
+  height: 60px;
+  width: 60px;
+  border-radius: 15px;
+  overflow: hidden;
+  margin: 10px;
 }
 
 .img-container img {
-    width: 100%;
+  width: 100%;
 }
 
 /* ------Chat Display ------- */
 .chat-display {
-    padding: 2rem;
-    height: 50vh;
-    overflow-y: auto;
-    text-align: center;
+  padding: 2rem;
+  height: 50vh;
+  overflow-y: auto;
+  text-align: center;
 }
 
 .chat-input {
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
 }

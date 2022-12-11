@@ -30,13 +30,11 @@ const Onboarding = () => {
   let navigate = useNavigate();
 
   const handleSubmit = async (e) => {
-    console.log("submitted");
     e.preventDefault();
     try {
       const response = await axios.put("http://localhost:8000/user", {
         formData,
       });
-      console.log(response);
       const success = response.status === 200;
       if (success) navigate("/dashboard");
     } catch (error) {
@@ -45,7 +43,6 @@ const Onboarding = () => {
   };
 
   const handleChange = (e) => {
-    console.log("e", e);
     const value =
       e.target.type === "checkbox" ? e.target.checked : e.target.value;
     const name = e.target.name;
@@ -57,10 +54,7 @@ const Onboarding = () => {
   };
 
   const handleCheckbox = (e) => {
-    console.log(e.target.checked);
-
     const isChecked = e.target.checked;
-
     if (isChecked) {
       formData.eras = [...formData.eras, e.target.value];
     } else {
@@ -174,14 +168,15 @@ const Onboarding = () => {
               />
               <label htmlFor="other-gender-identity">Other</label>
             </div>
-           
+
             <input
               id="show_gender"
               type="checkbox"
               name="show_gender"
               onChange={handleChange}
               checked={formData.show_gender}
-            /><label htmlFor="show_gender">Show Gender on my Profile</label>
+            />
+            <label htmlFor="show_gender">Show Gender on my Profile</label>
             {/* <label>Show Me</label> */}
             <small>Interested in</small>
             <div className="radio">
@@ -333,19 +328,20 @@ const Onboarding = () => {
               <div>
                 <label htmlFor="url">Profile Photo</label>
                 <input
-                type="url"
-                name="url"
-                id="url"
-                onChange={handleChange}
-                required={true}/>
+                  type="url"
+                  name="url"
+                  id="url"
+                  onChange={handleChange}
+                  required={true}
+                />
               </div>
 
               <div className="photo-container">
                 {formData.url && (
-                <img src={formData.url} alt="profile pic preview" />
-              )}
+                  <img src={formData.url} alt="profile pic preview" />
+                )}
               </div>
-          </section>
+            </section>
 
             <button type="submit">Submit</button>
           </div>
