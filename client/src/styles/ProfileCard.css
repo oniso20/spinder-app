@@ -8,14 +8,46 @@ h3 {
     text-transform: capitalize;
 }
 
+.pin {
+    display: inline-block;
+    width: 0.8rem;
+    height: auto;
+    filter: invert(1);
+}
+
+.gender-icon {
+    display: inline-block;
+    width: 0.9rem;
+    height: auto;
+    filter: invert(1);
+}
+
+.profile-card .info-box {
+    width: 225px;
+    height: 250px;
+    /* border: 1px solid white; */
+    border-radius: 1rem;
+}
+
 .profile-card p {
-    margin: 1rem;
-    line-height: 1rem;
+    margin: 0.7rem 0.2rem 0.7rem 1rem;
+    line-height: 0.6rem;
     display: block;
+    font-size: 0.9rem;
+    line-height: 1rem;
+}
+.spotify-box {
+    width: 93%;
+    margin: 0 auto;
+}
+
+.profile-card span {
+    margin: 0 0.2rem 1rem 1rem;
+    font-size: 0.8rem;
 }
 
 .profile-card {
-    width: 500px;
+    width: 450px;
     height: 650px;
     border-radius: 1rem;
     background-color: rgba(240, 255, 255, 0.336);
@@ -34,10 +66,10 @@ h3 {
 }
 
 .music-data-box {
-    width: 498px;
-    height: 370px;
+    width: 448px;
+    height: 250px;
     border-radius: 1rem;
-    border: 1px solid white;
+    /* border: 1px solid white; */
     position: absolute;
     bottom: 0;
 }
@@ -47,11 +79,12 @@ h3 {
     height: 35px;
     /* border: 1px solid white; */
     position: absolute;
-    bottom: 0.5rem;
-    right: 0.5rem;
+    bottom: 0.2rem;
+    right: 0;
 }
 
 .icons-box img {
     padding: 2px;
+    width: 30px;
     filter: invert();
 }

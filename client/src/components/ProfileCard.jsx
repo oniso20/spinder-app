@@ -1,7 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+import Spotify from 'react-spotify-embed';
+
 import email from "../assets/email.png";
 import heart from "../assets/heart.png";
-import pfp from "../assets/pfp.png";
+import pin from "../assets/pin.png";
+import gender from "../assets/gender.png"
+import arrow from "../assets/arrows.png"
+
 import "../styles/ProfileCard.css";
 
 
@@ -12,34 +17,48 @@ const ProfileCard = ({ user }) => {
   return (
     <div className="profile-card">
     
+     <img className="pfp" src={user.url} alt="profile-img" />
 
+     <div className="info-box">
       <h3>{user.first_name}</h3>
+
+      <p><img className="pin" src={pin} alt="location-pin" /> {user.location}</p>
 
       <img className="pfp" src={user.url} alt="profile-img" />
 
-      <p>
-        Birthday: {`${user.dob_month}, ${user.dob_day}`}, Gender:
-        {user.gender_identity}
-      </p>
-      <p>Location: {user.location}</p>
-      <p>Short intro: {user.about}</p>
+      <p>Birthday: {`${user.dob_month}, ${user.dob_day}`}</p>
+      <p><img className="gender-icon" src={gender} alt="gender-icon" /> {user.gender_identity}</p>
+      <br />
+      <p> {user.about}</p>
+      
+      </div>
+      <div className="spotify-box">
+
+        <Spotify wide link="https://open.spotify.com/track/3eX0NZfLtGzoLUxPNvRfqm?si=3939e145bb5b4c18"/></div>  
 
       <div className="music-data-box">
-        <p>Lyrics answer: {user.lyrics_melody_preference}</p>
-        <p>Credit song: {user.credit_song_preference}</p>
-        <p>Mood Song: {user.mood_song_preference}</p>
-        <p>
-          Eras array:
+        <p>Lyrics or melody?</p>
+        <span><img className="pin" src={arrow} alt="arrow" /> {user.lyrics_melody_preference}</span>
+        <p>End credit song?</p>
+        <span><img className="pin" src={arrow} alt="arrow" /> {user.credit_song_preference}</span>
+        <p>Song to get into the mood?</p>
+        <span><img className="pin" src={arrow} alt="arrow" /> {user.mood_song_preference}</span>
+        <p>Favorite eras of music?</p>
           {user.eras?.map((era, idx) => {
-            return <span key={idx}>{era}</span>;
-          })}
-        </p>
-      </div>
+            return <span key={idx}> <img className="pin" src={arrow} alt="arrow" />  {era} </span>;
+            })}
 
+        {/* <div className="spotify-box">
+        <Spotify wide link="https://open.spotify.com/track/3eMi4WvFU4xKBiPnrEZo4v?si=9d076b5508dd4aca"/></div>    */}
+        
+       
+      </div>
+    
       <div className="icons-box">
         <img src={email} alt="email" />
         <img src={heart} alt="heart" />
       </div>
+     
     </div>
   );
 };
