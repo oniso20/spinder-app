@@ -125,6 +125,7 @@ const Dashboard = () => {
   const swiped = (direction, swipedUserId) => {
     if (direction === "right") {
       matchesUpdate(swipedUserId);
+      window.location.reload();
     }
     setLastDirection(direction);
   };

@@ -63,6 +63,17 @@ const Onboarding = () => {
     }
   };
 
+  const handleInput = (e) => {
+    if (formData.dob_year.length > 4) {
+      e.target.value = e.target.value.slice(0, 4)
+    } else if (formData.dob_day.length > 2 || formData.dob_month.length > 2 ) {
+      e.target.value = e.target.value.slice(0, 2)
+    } else {
+      return e.target.value
+    } 
+  }
+  
+
   return (
     <>
       <div className="form-cont">
@@ -82,34 +93,47 @@ const Onboarding = () => {
               />
             </div>
             <div>
+              {/* Made Changes to Birthday Inputs */}
               <label>Birthday</label>
               <div className="birthday-container">
                 <input
                   id="dob_day"
                   type="number"
                   name="dob_day"
+                  min="01"
+                  max="31"
+                  step="01"
                   placeholder="DD"
                   required={true}
                   value={formData.dob_day}
                   onChange={handleChange}
+                  onInput={handleInput}
                 />
                 <input
                   id="dob_month"
                   type="number"
                   name="dob_month"
+                  min="01"
+                  max="12"
+                  step="01"
                   placeholder="MM"
                   required={true}
                   value={formData.dob_month}
                   onChange={handleChange}
+                  onInput={handleInput}
                 />
                 <input
                   id="dob_year"
                   type="number"
                   name="dob_year"
+                  min="0000"
+                  max="2004"
+                  step="01"
                   placeholder="YYYY"
                   required={true}
                   value={formData.dob_year}
                   onChange={handleChange}
+                  onInput={handleInput}
                 />
               </div>
             </div>
@@ -215,13 +239,24 @@ const Onboarding = () => {
               <label htmlFor="lyrics_melody_preference">
                 Lyrics or melody, which is more important to you?
               </label>
+              <div className="radio1">
               <input
-                id="lyrics_melody_preference"
-                type="text"
+                id="lyrics_preference"
+                type="radio"
                 name="lyrics_melody_preference"
-                value={formData.lyrics_melody_preference}
+                value="lyrics"
                 onChange={handleChange}
               />
+              <label htmlFor="lyrics_preference">Lyrics</label>
+              <input
+                id="melody_preference"
+                type="radio"
+                name="lyrics_melody_preference"
+                value="melody"
+                onChange={handleChange}
+              />
+              <label htmlFor="melody_preference">Melody</label>
+            </div>
             </div>
 
             <div>

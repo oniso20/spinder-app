@@ -45,9 +45,23 @@
 }
 
 .dashboard .card-container {
-  width: 400px;
-  height: 650px;
-}
+    width: 400px;
+    height: 650px;
+  }
+  
+  .card {
+    background-color: #fff;
+    width: 400px;
+    height: 650px;
+    border-radius: 30px;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .card h3 {
+    margin-top: 0;
+    text-align: center;
+  }
 
 .card {
   background-color: #fff;
@@ -96,7 +110,6 @@
 .chat-container .option:disabled {
   border-bottom: 1px solid rgb(187, 187, 187);
 }
-
 .chat-container .profile,
 .chat-container .log-out-icon {
   display: flex;
@@ -118,7 +131,6 @@
   width: 100%;
 }
 
-/* ------Chat Display ------- */
 .chat-display {
   padding: 2rem;
   height: 50vh;
