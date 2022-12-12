@@ -60,6 +60,17 @@
     border: 1px solid white;
     border-radius: 5px;
 }
+.radio1 label{
+    /* CSS addition for radio button change */
+    display: flex;
+    margin: 0.2rem;
+    justify-content: space-around;
+}
+
+.radio1 input[type="radio"] {
+     /* CSS addition for radio button change */
+    border: none;
+ }
 
 .radio label {
     border: 1px solid white;

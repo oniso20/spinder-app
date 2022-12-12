@@ -99,6 +99,7 @@ const Onboarding = () => {
               />
             </div>
             <div>
+              {/* Made Changes to Birthday Inputs */}
               <label>Birthday</label>
               <div className="birthday-container">
                 <input
@@ -248,13 +249,32 @@ const Onboarding = () => {
               <label htmlFor="lyrics_melody_preference">
                 Lyrics or melody, which is more important to you?
               </label>
+              <div className="radio1">
               <input
-                id="lyrics_melody_preference"
-                type="text"
+                id="lyrics_preference"
+                type="radio"
                 name="lyrics_melody_preference"
-                value={formData.lyrics_melody_preference}
+                value="lyrics"
                 onChange={handleChange}
               />
+              <label htmlFor="lyrics_preference">Lyrics</label>
+              <input
+                id="melody_preference"
+                type="radio"
+                name="lyrics_melody_preference"
+                value="melody"
+                onChange={handleChange}
+              />
+              <label htmlFor="melody_preference">Melody</label>
+              <input
+                id="both_preference"
+                type="radio"
+                name="lyrics_melody_preference"
+                value="both"
+                onChange={handleChange}
+              />
+              <label htmlFor="both_preference">Both</label>
+            </div>
             </div>
 
             <div>
