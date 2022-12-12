@@ -22,9 +22,13 @@ const ProfileCard = ({ user }) => {
      <div className="info-box">
       <h3>{user.first_name}</h3>
 
+
       <p><img className="pin" src={pin} alt="location-pin" /> {user.location}</p>
 
       <img className="pfp" src={user.url} alt="profile-img" />
+
+      <img className="pfp" src={user.url} alt={user.first_name} />
+
 
       <p>Birthday: {`${user.dob_month}, ${user.dob_day}`}</p>
       <p><img className="gender-icon" src={gender} alt="gender-icon" /> {user.gender_identity}</p>

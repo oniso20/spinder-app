@@ -43,7 +43,11 @@
     "@react-spring/web": "^9.5.5",
     "axios": "^1.2.0",
     "react-cookie": "^4.1.1",
+<<<<<<< HEAD
     "react-spotify-embed": "^1.0.4",
+=======
+    "react-panresponder-web": "^1.0.2",
+>>>>>>> c8e29841b23288e1cf76c3b06f22acec41397d1a
     "react-tinder-card": "^1.6.2"
   }
 }

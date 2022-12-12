@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useCookies } from "react-cookie";
 
@@ -12,10 +13,13 @@ const Whatever = () => {
   const [cookies, setCookie, removeCookie] = useCookies(["user"]);
 
   const userId = cookies.UserId;
+  let navigate = useNavigate();
 
-  const getUser = async () => {
+  const getUser = async (userId) => {
     try {
-      const response = await axios.get(`http://localhost:8000/user/${userId}`);
+      const response = await axios.get("http://localhost:8000/user", {
+        params: { userId },
+      });
       setUser(response.data);
     } catch (error) {
       console.log(error);
@@ -23,17 +27,13 @@ const Whatever = () => {
   };
 
   useEffect(() => {
-    getUser();
+    getUser(userId);
   }, []);
-
-  useEffect(() => {
-    // Log the value of the user state variable only when it changes
-    console.log(user);
-  }, [user]);
 
   const logout = () => {
     removeCookie("UserId", cookies.UserId);
     removeCookie("AuthToken", cookies.AuthToken);
+    navigate("/");
 
     window.location.reload();
   };
@@ -43,7 +43,7 @@ const Whatever = () => {
       <div className="dash-info">
         <Nav />
         <h3>Welcome</h3>
-        <p>{user.first_name}</p>
+        <p>{user?.first_name}</p>
         <button onClick={logout}>Log out</button>
       </div>
 
