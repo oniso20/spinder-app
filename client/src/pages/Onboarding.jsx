@@ -64,19 +64,13 @@ const Onboarding = () => {
   };
 
   const handleInput = (e) => {
-    if (formData.dob_day.length <= 2 || formData.dob_month.length <= 2 ) {
+    if (formData.dob_year.length > 4) {
+      e.target.value = e.target.value.slice(0, 4)
+    } else if (formData.dob_day.length > 2 || formData.dob_month.length > 2 ) {
       e.target.value = e.target.value.slice(0, 2)
     } else {
       return e.target.value
     } 
-  }
-
-  const handleInput1 = (e) => {
-   if (formData.dob_year.length <= 4) {
-      e.target.value = e.target.value.slice(0, 4)
-    } else {
-      return e.target.value
-    }
   }
   
 
@@ -106,28 +100,26 @@ const Onboarding = () => {
                   id="dob_day"
                   type="number"
                   name="dob_day"
-                  min="00"
+                  min="01"
                   max="31"
                   step="01"
                   placeholder="DD"
                   required={true}
                   value={formData.dob_day}
                   onChange={handleChange}
-                  //onInput={(e) => e.target.value = e.target.value.slice(0, 2)}
                   onInput={handleInput}
                 />
                 <input
                   id="dob_month"
                   type="number"
                   name="dob_month"
-                  min="00"
+                  min="01"
                   max="12"
                   step="01"
                   placeholder="MM"
                   required={true}
                   value={formData.dob_month}
                   onChange={handleChange}
-                  //onInput={(e) => e.target.value = e.target.value.slice(0, 2)}
                   onInput={handleInput}
                 />
                 <input
@@ -137,13 +129,11 @@ const Onboarding = () => {
                   min="0000"
                   max="2004"
                   step="01"
-                  maxLength="4"
                   placeholder="YYYY"
                   required={true}
                   value={formData.dob_year}
                   onChange={handleChange}
-                  //onInput={(e) => e.target.value = e.target.value.slice(0, 4)}
-                  onInput={handleInput1}
+                  onInput={handleInput}
                 />
               </div>
             </div>
@@ -266,14 +256,6 @@ const Onboarding = () => {
                 onChange={handleChange}
               />
               <label htmlFor="melody_preference">Melody</label>
-              <input
-                id="both_preference"
-                type="radio"
-                name="lyrics_melody_preference"
-                value="both"
-                onChange={handleChange}
-              />
-              <label htmlFor="both_preference">Both</label>
             </div>
             </div>
 
