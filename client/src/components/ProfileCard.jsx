@@ -22,7 +22,7 @@ const ProfileCard = ({ user }) => {
 
       <h3>{user.first_name}</h3>
 
-      <img className="pfp" src={user.url} alt="profile-img" />
+      <img className="pfp" src={user.url} alt={user.first_name} />
 
       <p>
         Birthday: {`${user.dob_month}, ${user.dob_day}`}, Gender:

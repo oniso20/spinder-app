@@ -1,13 +1,16 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { useCookies } from "react-cookie";
 
 const ChatsHeader = ({ user }) => {
-  console.log("This", user);
   const [cookies, setCookie, removeCookie] = useCookies(["user"]);
+
+  let navigate = useNavigate();
 
   const logout = () => {
     removeCookie("UserId", cookies.UserId);
     removeCookie("AuthToken", cookies.AuthToken);
+    navigate("/");
 
     window.location.reload();
   };

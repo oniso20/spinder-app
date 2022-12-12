@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
-import MatchCard from "react-tinder-card";
+import TinderCard from "react-tinder-card";
 import axios from "axios";
 import { useCookies } from "react-cookie";
 
@@ -9,61 +9,142 @@ import Nav from "../components/Nav";
 
 const Dashboard = () => {
   const [user, setUser] = useState(null);
+  const [choiceUsers, setChoiceUsers] = useState([]);
+  const [genderedUsers, setGenderedUsers] = useState([]);
+  const [mlUsers, setMlUsers] = useState([]);
+  const [moodUsers, setMoodUsers] = useState([]);
+  const [creditUsers, setCreditUsers] = useState([]);
   const [cookies, setCookie, removeCookie] = useCookies(["user"]);
+  const [lastDirection, setLastDirection] = useState();
 
   const userId = cookies.UserId;
 
-  const getUser = async () => {
+  const getUser = async (userId) => {
     try {
-      const response = await axios.get(`http://localhost:8000/user/${userId}`);
+      const response = await axios.get("http://localhost:8000/user", {
+        params: { userId },
+      });
       setUser(response.data);
     } catch (error) {
       console.log(error);
     }
   };
 
+  const getGenderedUsers = async () => {
+    try {
+      const response = await axios.get("http://localhost:8000/gendered-users", {
+        params: { gender: user?.gender_interest },
+      });
+      setGenderedUsers(response.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  // ml => mood and lyrics
+  const getMlUsers = async () => {
+    try {
+      const response = await axios.get(
+        "http://localhost:8000/ml-preference-users",
+        {
+          params: { ml: user?.lyrics_melody_preference },
+        }
+      );
+      setMlUsers(response.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const getMoodUsers = async () => {
+    try {
+      const response = await axios.get(
+        "http://localhost:8000/mood-preference-users",
+        {
+          params: { mood: user?.mood_song_preference },
+        }
+      );
+      setMoodUsers(response.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const getCreditUsers = async () => {
+    try {
+      const response = await axios.get(
+        "http://localhost:8000/credit-preference-users",
+        {
+          params: { credit: user?.credit_song_preference },
+        }
+      );
+      setCreditUsers(response.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   useEffect(() => {
-    getUser();
+    getUser(userId);
+    getGenderedUsers();
+    getMlUsers();
+    getMoodUsers();
+    getCreditUsers();
   }, []);
 
   useEffect(() => {
-    // Log the value of the user state variable only when it changes
-    console.log(user);
-  }, [user]);
+    // Using the Array.filter() method to create an array of the defined and non-empty genderedUsers, mlUsers, moodUsers, and creditUsers arrays
+    const choicesOfUser = [
+      genderedUsers,
+      mlUsers,
+      moodUsers,
+      creditUsers,
+    ].filter((choices) => Array.isArray(choices) && choices.length > 0);
 
-  const characters = [
-    {
-      name: "Richard Hendricks",
-      url: "https://1fid.com/wp-content/uploads/2022/06/Twitter-profile-picture-1024x1022.jpg",
-    },
-    {
-      name: "Erlich Bachman",
-      url: "https://1fid.com/wp-content/uploads/2022/06/Twitter-profile-picture-1024x1022.jpg",
-    },
-    {
-      name: "Monica Hall",
-      url: "https://1fid.com/wp-content/uploads/2022/06/Twitter-profile-picture-1024x1022.jpg",
-    },
-    {
-      name: "Jared Dunn",
-      url: "https://1fid.com/wp-content/uploads/2022/06/Twitter-profile-picture-1024x1022.jpg",
-    },
-    {
-      name: "Dinesh Chugtai",
-      url: "https://1fid.com/wp-content/uploads/2022/06/Twitter-profile-picture-1024x1022.jpg",
-    },
-  ];
+    // If the arrays array is not empty, concatenate and map its values
+    if (choicesOfUser.length > 0) {
+      setChoiceUsers((choice) => {
+        choice = choicesOfUser;
+        return choice.flat().map((user) => user);
+      });
+    }
+  }, [user, genderedUsers, mlUsers, moodUsers, creditUsers]);
 
-  const [lastDirection, setLastDirection] = useState();
+  const matchesUpdate = async (matchedUserId) => {
+    try {
+      await axios.put("http://localhost:8000/addmatch", {
+        userId,
+        matchedUserId,
+      });
+      getUser();
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
-  const swiped = (direction, nameToDelete) => {
-    console.log("removing: " + nameToDelete);
+  const swiped = (direction, swipedUserId) => {
+    if (direction === "right") {
+      matchesUpdate(swipedUserId);
+    }
     setLastDirection(direction);
   };
 
   const outOfFrame = (name) => {
-    console.log(name + " left the screen!");
+    // console.log(name + " left the screen!");
   };
+
+  const matchedUserChoicesId =
+    user && user.matches
+      ? user.matches.map(({ user_id }) => user_id).concat(userId)
+      : undefined;
+
+  //Avoid repeated users showing up
+  const filteredChoiceUsers = Array.prototype.filter.call(
+    choiceUsers,
+    (choiceUser) => {
+      return !matchedUserChoicesId?.includes(choiceUser.user_id);
+    }
+  );
 
   return (
     <>
@@ -79,21 +160,24 @@ const Dashboard = () => {
             </div>
             <div className="swipe-container">
               <div className="card-container">
-                {characters.map((character) => (
-                  <MatchCard
-                    className="swipe"
-                    key={character.name}
-                    onSwipe={(dir) => swiped(dir, character.name)}
-                    onCardLeftScreen={() => outOfFrame(character.name)}
-                  >
-                    <div
-                      style={{ backgroundImage: "url(" + character.url + ")" }}
-                      className="card"
+                {filteredChoiceUsers &&
+                  filteredChoiceUsers.map((choiceUser) => (
+                    <TinderCard
+                      className="swipe"
+                      key={Math.random()}
+                      onSwipe={(dir) => swiped(dir, choiceUser.user_id)}
+                      onCardLeftScreen={() => outOfFrame(choiceUser.first_name)}
                     >
-                      <h3>{character.name}</h3>
-                    </div>
-                  </MatchCard>
-                ))}
+                      <div
+                        style={{
+                          backgroundImage: "url(" + choiceUser.url + ")",
+                        }}
+                        className="card"
+                      >
+                        <h3>{choiceUser.first_name}</h3>
+                      </div>
+                    </TinderCard>
+                  ))}
                 <div className="swipe-info">
                   {lastDirection ? <p>You swiped {lastDirection}</p> : <p />}
                 </div>

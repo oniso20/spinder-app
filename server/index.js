@@ -89,26 +89,57 @@ app.post('/signup', async (req, res) => {
 
 });
 
-app.get('/user/:userId', async (req, res) => {
+app.get('/user', async (req, res) => {
     const client = new MongoClient(uri);
-    const userId = req.params.userId;
+    const userId = req.query.userId;
 
     try {
         await client.connect();
         const database = client.db('spinder-data');
         const users = database.collection('users');
 
-        console.log('userId', userId);
-
         const query = { user_id: userId };
         const user = await users.findOne(query);
         res.send(user);
+
     } finally {
         await client.close();
     }
 });
 
+
 app.get('/users', async (req, res) => {
+    const client = new MongoClient(uri);
+    const userIds = req.query.userIds;
+    console.log(userIds);
+
+    try {
+        await client.connect();
+        const database = client.db('spinder-data');
+        const users = database.collection('users');
+
+        const pipeline = [
+            {
+                $match: {
+                    user_id: {
+                        $in: userIds,
+                    },
+                },
+            },
+        ];
+
+        const usersFound = await users.aggregate(pipeline).toArray();
+
+        res.json(usersFound);
+    } catch (error) {
+        // Handle the error here
+        console.error(error);
+    } finally {
+        await client.close();
+    }
+});
+
+app.get('/all-users', async (req, res) => {
     const client = new MongoClient(uri);
 
     try {
@@ -122,6 +153,81 @@ app.get('/users', async (req, res) => {
         await client.close();
     }
 });
+
+app.get('/gendered-users', async (req, res) => {
+    const client = new MongoClient(uri);
+    const gender = req.query.gender;
+
+
+
+    try {
+        await client.connect();
+        const database = client.db('spinder-data');
+        const users = database.collection('users');
+        console.log("Gender in query: ", gender); // Log the value of the gender variable in the query
+        const query = { gender_identity: { $eq: 'male' } };
+        const foundUsers = await users.find(query).toArray();
+
+        console.log("Users found: ", foundUsers); // Log the users found by the query
+
+        res.send(foundUsers);
+    } finally {
+        await client.close();
+    }
+});
+
+// ml => melody/lyrics
+app.get('/ml-preference-users', async (req, res) => {
+    const client = new MongoClient(uri);
+    const ml = req.query.ml;
+
+    try {
+        await client.connect();
+        const database = client.db('spinder-data');
+        const users = database.collection('users');
+        const query = { lyrics_melody_preference: { $eq: ml } };
+        const foundUsers = await users.find(query).toArray();
+
+        res.send(foundUsers);
+    } finally {
+        await client.close();
+    }
+});
+
+app.get('/mood-preference-users', async (req, res) => {
+    const client = new MongoClient(uri);
+    const mood = req.query.mood;
+
+    try {
+        await client.connect();
+        const database = client.db('spinder-data');
+        const users = database.collection('users');
+        const query = { mood_song_preference: { $eq: mood } };
+        const foundUsers = await users.find(query).toArray();
+
+        res.send(foundUsers);
+    } finally {
+        await client.close();
+    }
+});
+
+app.get('/credit-preference-users', async (req, res) => {
+    const client = new MongoClient(uri);
+    const credit = req.query.credit;
+
+    try {
+        await client.connect();
+        const database = client.db('spinder-data');
+        const users = database.collection('users');
+        const query = { credit_song_preference: { $eq: credit } };
+        const foundUsers = await users.find(query).toArray();
+
+        res.send(foundUsers);
+    } finally {
+        await client.close();
+    }
+});
+
 
 app.put('/user', async (req, res) => {
     const client = new MongoClient(uri);
@@ -159,6 +265,64 @@ app.put('/user', async (req, res) => {
     }
 
 
+});
+
+app.put('/addmatch', async (req, res) => {
+    const client = new MongoClient(uri);
+    const { userId, matchedUserId } = req.body;
+
+    try {
+        await client.connect();
+        const database = client.db('spinder-data');
+        const users = database.collection('users');
+
+        const query = { user_id: userId };
+        const updateDocument = {
+            $push: { matches: { user_id: matchedUserId } },
+        };
+        const match = await users.updateOne(query, updateDocument);
+        res.send(match);
+    } finally {
+        await client.close();
+    }
+
+});
+
+// Get Messages by from_userId and to_userId
+app.get('/messages', async (req, res) => {
+    const client = new MongoClient(uri);
+
+    try {
+        await client.connect();
+        const database = client.db('spinder-data');
+        const messages = database.collection('messages');
+
+        const query = {
+            from_userId: req.query.userId,
+            to_userId: req.query.correspondingUserId
+        };
+        const foundMessages = await messages.find(query).toArray();
+        res.send(foundMessages);
+    } finally {
+        await client.close();
+    }
+});
+
+// Add a Message to our Database
+app.post('/message', async (req, res) => {
+    const client = new MongoClient(uri);
+    const message = req.body.message;
+
+    try {
+        await client.connect();
+        const database = client.db('spinder-data');
+        const messages = database.collection('messages');
+
+        const insertedMessage = await messages.insertOne(message);
+        res.send(insertedMessage);
+    } finally {
+        await client.close();
+    }
 });
 
 app.listen(PORT, HOST, () => {
