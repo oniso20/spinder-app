@@ -15,8 +15,9 @@ const ProfileCard = ({ user }) => {
       .then((res) => setUserData(res.userData));
     // console.log(userData);
   }, []);
-
+  let date =  new Date().getFullYear();
   return (
+
     <div className="profile-card">
       {/* {userData.map(user => key={})} */}
 
@@ -25,7 +26,7 @@ const ProfileCard = ({ user }) => {
       <img className="pfp" src={user.url} alt={user.first_name} />
 
       <p>
-        Birthday: {`${user.dob_month}, ${user.dob_day}`}, Gender:
+        Age: {`${date - user.dob_year}`}, Gender:
         {user.gender_identity}
       </p>
       <p>Location: {user.location}</p>
