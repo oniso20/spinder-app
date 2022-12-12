@@ -63,6 +63,23 @@ const Onboarding = () => {
     }
   };
 
+  const handleInput = (e) => {
+    if (formData.dob_day.length <= 2 || formData.dob_month.length <= 2 ) {
+      e.target.value = e.target.value.slice(0, 2)
+    } else {
+      return e.target.value
+    } 
+  }
+
+  const handleInput1 = (e) => {
+   if (formData.dob_year.length <= 4) {
+      e.target.value = e.target.value.slice(0, 4)
+    } else {
+      return e.target.value
+    }
+  }
+  
+
   return (
     <>
       <div className="form-cont">
@@ -88,28 +105,44 @@ const Onboarding = () => {
                   id="dob_day"
                   type="number"
                   name="dob_day"
+                  min="00"
+                  max="31"
+                  step="01"
                   placeholder="DD"
                   required={true}
                   value={formData.dob_day}
                   onChange={handleChange}
+                  //onInput={(e) => e.target.value = e.target.value.slice(0, 2)}
+                  onInput={handleInput}
                 />
                 <input
                   id="dob_month"
                   type="number"
                   name="dob_month"
+                  min="00"
+                  max="12"
+                  step="01"
                   placeholder="MM"
                   required={true}
                   value={formData.dob_month}
                   onChange={handleChange}
+                  //onInput={(e) => e.target.value = e.target.value.slice(0, 2)}
+                  onInput={handleInput}
                 />
                 <input
                   id="dob_year"
                   type="number"
                   name="dob_year"
+                  min="0000"
+                  max="2004"
+                  step="01"
+                  maxLength="4"
                   placeholder="YYYY"
                   required={true}
                   value={formData.dob_year}
                   onChange={handleChange}
+                  //onInput={(e) => e.target.value = e.target.value.slice(0, 4)}
+                  onInput={handleInput1}
                 />
               </div>
             </div>
