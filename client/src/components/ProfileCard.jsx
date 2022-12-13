@@ -15,8 +15,16 @@ let songURL = 'https://open.spotify.com/track/3UMrglJeju5yWyYIW6o99b?si=e01586f0
 const ProfileCard = ({ user }) => {
   
 
+  useEffect(() => {
+    axios
+      .get("http://localhost:8000/users")
+      .then((res) => setUserData(res.userData));
+    // console.log(userData);
+  }, []);
+  let date =  new Date().getFullYear();
 
   return (
+
     <div className="profile-card">
     
      <img className="pfp" src={user.url} alt="profile-img" />
@@ -38,6 +46,14 @@ const ProfileCard = ({ user }) => {
       <p> {user.about}</p>
       
       </div>
+
+      <p>
+        Age: {`${date - user.dob_year}`}, Gender:
+        {user.gender_identity}
+      </p>
+      <p>Location: {user.location}</p>
+      <p>Short intro: {user.about}</p>
+
 
       <div className="music-data-box">
         <p>Lyrics or melody?</p>
