@@ -23,9 +23,7 @@ const ChatsHeader = ({ user }) => {
         </div>
         <h3>{user.first_name}</h3>
       </div>
-      <i className="log-out-icon" onClick={logout}>
-        x
-      </i>
+      <p className="log-out-icon" onClick={logout}>x</p>
     </div>
   );
 };

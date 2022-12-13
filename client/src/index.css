@@ -16,8 +16,8 @@
 }
 
 .dashboard {
-  width: 70vw;
-  height: 90vh;
+  width: 80vw;
+  height: 92vh;
   display: flex;
   flex-direction: row;
   margin: 0 auto;
@@ -51,7 +51,7 @@
     height: 650px;
   }
   
-  .card {
+.card {
     background-color: #fff;
     width: 400px;
     height: 650px;
@@ -60,7 +60,7 @@
     background-position: center;
   }
   
-  .card h3 {
+.card h3 {
     margin-top: 0;
     text-align: center;
   }
@@ -78,6 +78,7 @@
 .card h3 {
   text-align: center;
   padding-top: 0.5rem;
+  filter: drop-shadow(2px 2px 2px #333);
 }
 
 .dashboard .swipe-info {
@@ -175,4 +176,21 @@
   border: none;
   font-family: var(--main-font);
 }
+
+.msg-cont {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+}
+
+.msg-cont p {
+  margin: 1.2rem 0.5rem;
+  color: var(--dark-purple);
+}
+
+.msg-cont .msg {
+  color: var(--white-color);
+}
+
+
 
