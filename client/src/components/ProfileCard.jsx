@@ -1,13 +1,15 @@
 import React from "react";
 import Spotify from 'react-spotify-embed';
 
-import email from "../assets/email.png";
-import heart from "../assets/heart.png";
+// import email from "../assets/email.png";
+// import heart from "../assets/heart.png";
 import pin from "../assets/pin.png";
 import gender from "../assets/gender.png"
 import arrow from "../assets/arrows.png"
 
 import "../styles/ProfileCard.css";
+
+let songURL = 'https://open.spotify.com/track/3UMrglJeju5yWyYIW6o99b?si=e01586f0f4144b07';
 
 
 const ProfileCard = ({ user }) => {
@@ -36,9 +38,6 @@ const ProfileCard = ({ user }) => {
       <p> {user.about}</p>
       
       </div>
-      <div className="spotify-box">
-
-        <Spotify wide link="https://open.spotify.com/track/3eX0NZfLtGzoLUxPNvRfqm?si=3939e145bb5b4c18"/></div>  
 
       <div className="music-data-box">
         <p>Lyrics or melody?</p>
@@ -52,16 +51,14 @@ const ProfileCard = ({ user }) => {
             return <span key={idx}> <img className="pin" src={arrow} alt="arrow" />  {era} </span>;
             })}
 
-        {/* <div className="spotify-box">
-        <Spotify wide link="https://open.spotify.com/track/3eMi4WvFU4xKBiPnrEZo4v?si=9d076b5508dd4aca"/></div>    */}
-        
-       
       </div>
-    
-      <div className="icons-box">
+      <div className="spotify-box">
+      <Spotify wide link={songURL}/>
+      </div> 
+      {/* <div className="icons-box">
         <img src={email} alt="email" />
         <img src={heart} alt="heart" />
-      </div>
+      </div> */}
      
     </div>
   );

@@ -8,6 +8,74 @@ h3 {
     text-transform: capitalize;
 }
 
+/* CARD CONTAINER */
+
+.profile-card {
+    width: 450px;
+    height: 650px;
+    border-radius: 1rem;
+    background-color: rgba(240, 255, 255, 0.336);
+    margin: 0 auto;
+    margin-top: -5%;
+    border: 2px solid rgba(255, 255, 255, 0.444);
+    position: relative;
+}  
+
+.profile-card .info-box {
+    width: 225px;
+    height: 300px;
+    /* border: 1px solid white; */
+    border-radius: 1rem;
+}
+
+.profile-card p {
+    margin: 0.7rem 0.2rem 0.7rem 1rem;
+    line-height: 0.6rem;
+    display: block;
+    font-size: 0.9rem;
+    line-height: 1rem;
+}
+
+.spotify-box {
+    width: 93%;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 0.5rem;
+    left: 1rem;
+}
+
+.profile-card span {
+    margin: 0 0.2rem 1rem 1rem;
+    font-size: 0.8rem;
+}
+
+.music-data-box {
+    width: 448px;
+    height: 250px;
+    border-radius: 1rem;
+    /* border: 1px solid white; */
+}
+
+/* .icons-box {
+    width: 75px;
+    height: 35px;
+    /* border: 1px solid white; */
+    /*position: absolute;
+    bottom: 0.2rem;
+    right: 0;
+} */
+
+/* IMAGES & ICONS */
+
+.pfp {
+    width: 200px;
+    height: auto;
+    border-radius: 1rem;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+}
+
 .pin {
     display: inline-block;
     width: 0.8rem;
@@ -20,67 +88,6 @@ h3 {
     width: 0.9rem;
     height: auto;
     filter: invert(1);
-}
-
-.profile-card .info-box {
-    width: 225px;
-    height: 250px;
-    /* border: 1px solid white; */
-    border-radius: 1rem;
-}
-
-.profile-card p {
-    margin: 0.7rem 0.2rem 0.7rem 1rem;
-    line-height: 0.6rem;
-    display: block;
-    font-size: 0.9rem;
-    line-height: 1rem;
-}
-.spotify-box {
-    width: 93%;
-    margin: 0 auto;
-}
-
-.profile-card span {
-    margin: 0 0.2rem 1rem 1rem;
-    font-size: 0.8rem;
-}
-
-.profile-card {
-    width: 450px;
-    height: 650px;
-    border-radius: 1rem;
-    background-color: rgba(240, 255, 255, 0.336);
-    margin: 0 auto;
-    border: 2px solid rgba(255, 255, 255, 0.444);
-    position: relative;
-}
-
-.pfp {
-    width: 200px;
-    height: auto;
-    border-radius: 1rem;
-    position: absolute;
-    right: 1rem;
-    top: 1rem;
-}
-
-.music-data-box {
-    width: 448px;
-    height: 250px;
-    border-radius: 1rem;
-    /* border: 1px solid white; */
-    position: absolute;
-    bottom: 0;
-}
-
-.icons-box {
-    width: 75px;
-    height: 35px;
-    /* border: 1px solid white; */
-    position: absolute;
-    bottom: 0.2rem;
-    right: 0;
 }
 
 .icons-box img {

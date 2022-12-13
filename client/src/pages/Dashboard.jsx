@@ -151,9 +151,9 @@ const Dashboard = () => {
       {user && (
         <div className="dashboardContainer">
           <Nav />
-          <div className="dashboard-headline">
+          {/* <div className="dashboard-headline">
             <h1>Chat</h1>
-          </div>
+          </div> */}
           <div className="dashboard">
             <div className="profile-container">
               <ChatContainer user={user} />
