@@ -3,12 +3,12 @@ import { useCookies } from "react-cookie";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Dashboard from "./pages/Dashboard";
+import Dash from "./pages/Dash";
 import Home from "./pages/Home";
 import Layout from "./pages/Layout";
 import Onboarding from "./pages/Onboarding";
 import ChatContainer from "./components/ChatContainer";
-import Whatever from "./pages/Whatever";
+import BrowseProfiles from "./pages/BrowseProfiles";
 // import AuthModal1 from "./components/AuthModal1";
 // import Auth from "./components/Auth";
 // import { useUserContext } from "./context/UserContext";
@@ -26,8 +26,8 @@ const App = () => {
           <Route path="/" element={<Layout />} />
           <Route index element={<Home />} />
           {authToken && <Route path="/onboarding" element={<Onboarding />} />}
-          {authToken && <Route path="/dashboard" element={<Dashboard />} />}
-          {authToken && <Route path="/whatever" element={<Whatever />} />}
+          {authToken && <Route path="/browse" element={<BrowseProfiles />} />}
+          {authToken && <Route path="/dash" element={<Dash />} />}
           <Route path="/chatcontainer" element={<ChatContainer />} />
 
           {/* <Route path="/auth" element={<AuthModal1 />} /> */}

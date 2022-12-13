@@ -36,7 +36,7 @@ const Onboarding = () => {
         formData,
       });
       const success = response.status === 200;
-      if (success) navigate("/dashboard");
+      if (success) navigate("/dash");
     } catch (error) {
       console.log(error);
     }

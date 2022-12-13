@@ -31,6 +31,7 @@ const Home = () => {
   };
 
   return (
+    <div className="'overlay">
     <div className="wrapper">
       {/* <Nav /> */}
 
@@ -66,6 +67,7 @@ const Home = () => {
         <img className="couple2-img" src={couple2Img} alt="couple-img" />
         <img className="couple3-img" src={couple3Img} alt="couple-img" />
       </div>
+    </div>
     </div>
   );
 };

@@ -8,7 +8,7 @@ import Nav from "../components/Nav";
 
 import "../styles/dashboard.css";
 
-const Whatever = () => {
+const Dash = () => {
   const [user, setUser] = useState({});
   const [cookies, setCookie, removeCookie] = useCookies(["user"]);
 
@@ -54,4 +54,4 @@ const Whatever = () => {
   );
 };
 
-export default Whatever;
+export default Dash;

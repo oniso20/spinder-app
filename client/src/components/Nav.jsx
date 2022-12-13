@@ -15,12 +15,12 @@ const Nav = () => {
         <nav>
             <ul>
                 <li><NavLink to="/"><h2>S!</h2></NavLink></li>
-                <li><NavLink to="/whatever"><img className="icon" src={homeImg} alt="home-icon" /></NavLink></li>
+                <li><NavLink to="/dash"><img className="icon" src={homeImg} alt="home-icon" /></NavLink></li>
                 <li><a href="#"><img className="icon" src={searchImg} alt="search-icon" /></a></li>
-                <li><NavLink to="/dashboard"><img className="icon" src={profileImg} alt="profile-icon" /></NavLink></li>
+                <li><NavLink to="/browse"><img className="icon" src={profileImg} alt="profile-icon" /></NavLink></li>
                 <li><a href="#"><img className="icon" src={musicImg} alt="music-icon" /></a></li>
                 <li><a href="#"><img className="icon" src={matchImg} alt="match-icon" /></a></li>
-                <li><a href="#"><img className="icon" src={chat} alt="favorite-icon" /></a></li>
+                <li><NavLink to="/browse"><img className="icon" src={chat} alt="favorite-icon" /></NavLink></li>
             </ul>
         </nav>
 

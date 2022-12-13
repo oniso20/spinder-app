@@ -7,7 +7,7 @@ import { useCookies } from "react-cookie";
 import ChatContainer from "../components/ChatContainer";
 import Nav from "../components/Nav";
 
-const Dashboard = () => {
+const BrowseProfiles = () => {
   const [user, setUser] = useState(null);
   const [choiceUsers, setChoiceUsers] = useState([]);
   const [genderedUsers, setGenderedUsers] = useState([]);
@@ -191,4 +191,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default BrowseProfiles;
