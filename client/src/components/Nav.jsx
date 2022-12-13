@@ -14,7 +14,7 @@ const Nav = () => {
 
         <nav>
             <ul>
-                <li><NavLink to="/"><h2>S!</h2></NavLink></li>
+                <li><NavLink to="/"><h2>S</h2></NavLink></li>
                 <li><NavLink to="/dash"><img className="icon" src={homeImg} alt="home-icon" /></NavLink></li>
                 <li><a href="#"><img className="icon" src={searchImg} alt="search-icon" /></a></li>
                 <li><NavLink to="/browse"><img className="icon" src={profileImg} alt="profile-icon" /></NavLink></li>
