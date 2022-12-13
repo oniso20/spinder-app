@@ -7,7 +7,7 @@ import { useCookies } from "react-cookie";
 import ChatContainer from "../components/ChatContainer";
 import Nav from "../components/Nav";
 
-const Dashboard = () => {
+const BrowseProfiles = () => {
   const [user, setUser] = useState(null);
   const [choiceUsers, setChoiceUsers] = useState([]);
   const [genderedUsers, setGenderedUsers] = useState([]);
@@ -90,7 +90,7 @@ const Dashboard = () => {
     getMlUsers();
     getMoodUsers();
     getCreditUsers();
-  }, []);
+  }, [user]);
 
   useEffect(() => {
     // Using the Array.filter() method to create an array of the defined and non-empty genderedUsers, mlUsers, moodUsers, and creditUsers arrays
@@ -152,9 +152,9 @@ const Dashboard = () => {
       {user && (
         <div className="dashboardContainer">
           <Nav />
-          <div className="dashboard-headline">
+          {/* <div className="dashboard-headline">
             <h1>Chat</h1>
-          </div>
+          </div> */}
           <div className="dashboard">
             <div className="profile-container">
               <ChatContainer user={user} />
@@ -191,4 +191,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default BrowseProfiles;

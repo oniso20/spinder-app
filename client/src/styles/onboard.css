@@ -5,6 +5,7 @@
     background-color: rgba(255, 255, 255, 0.39);
     margin: 0 auto;
     margin-top: 2%;
+    margin-bottom: 2%;
     border-radius: 1rem;
     display: flex;
     justify-content: space-around;
@@ -60,16 +61,26 @@
     border: 1px solid white;
     border-radius: 5px;
 }
+
+.radio1 {
+    display: flex;
+    justify-content: left;
+    margin: 0.5rem;
+}
 .radio1 label{
     /* CSS addition for radio button change */
     display: flex;
+    border: 1px solid white;
+    border-radius: 5px;
+    height: 30px;
+    width: 65px;
+    text-align: center;
     margin: 0.2rem;
-    justify-content: space-around;
 }
 
 .radio1 input[type="radio"] {
      /* CSS addition for radio button change */
-    border: none;
+    display: none;
  }
 
 .radio label {
@@ -90,6 +101,14 @@
     background: var(--purple);
 }
 
+.radio1 input[type="radio"]:checked+label,
+.Checked+label {
+    background: var(--purple);
+}
+
+.radio1 label:hover {
+    background: var(--purple);
+}
 
 .form-cont input[type="text"] {
     display: block;
@@ -162,4 +181,11 @@ textarea:focus {
     background-color: rgba(255, 255, 255, 0.685);
     font-family: var(--main-font);
     display: block;
+    margin: 0 0 2rem 0;
+}
+
+.photo-container img {
+    width: 200px;
+    height: auto;
+    margin: 0 5rem 0 5rem;
 }

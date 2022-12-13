@@ -8,21 +8,66 @@ h3 {
     text-transform: capitalize;
 }
 
-.profile-card p {
-    margin: 1rem;
-    line-height: 1rem;
-    display: block;
-}
+/* CARD CONTAINER */
 
 .profile-card {
-    width: 500px;
-    height: 650px;
+    width: 450px;
+    height: fit-content;
     border-radius: 1rem;
     background-color: rgba(240, 255, 255, 0.336);
     margin: 0 auto;
+    margin-top: -5%;
     border: 2px solid rgba(255, 255, 255, 0.444);
     position: relative;
+}  
+
+.profile-card .info-box {
+    width: 225px;
+    height: 300px;
+    /* border: 1px solid white; */
+    border-radius: 1rem;
 }
+
+.profile-card p {
+    margin: 0.7rem 0.2rem 0.7rem 1rem;
+    line-height: 0.6rem;
+    display: block;
+    font-size: 0.9rem;
+    line-height: 1rem;
+}
+
+.spotify-box {
+    width: 93%;
+    height: 90px;
+    margin: 0 auto;
+    /* position: absolute;
+    bottom: 0.5rem;
+    left: 1rem; */
+}
+
+.profile-card span {
+    margin: 0 0.2rem 1rem 1rem;
+    font-size: 0.8rem;
+}
+
+.music-data-box {
+    width: 448px;
+    height: 250px;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    /* border: 1px solid white; */
+}
+
+/* .icons-box {
+    width: 75px;
+    height: 35px;
+    /* border: 1px solid white; */
+    /*position: absolute;
+    bottom: 0.2rem;
+    right: 0;
+} */
+
+/* IMAGES & ICONS */
 
 .pfp {
     width: 200px;
@@ -33,25 +78,22 @@ h3 {
     top: 1rem;
 }
 
-.music-data-box {
-    width: 498px;
-    height: 370px;
-    border-radius: 1rem;
-    border: 1px solid white;
-    position: absolute;
-    bottom: 0;
+.pin {
+    display: inline-block;
+    width: 0.8rem;
+    height: auto;
+    filter: invert(1);
 }
 
-.icons-box {
-    width: 75px;
-    height: 35px;
-    /* border: 1px solid white; */
-    position: absolute;
-    bottom: 0.5rem;
-    right: 0.5rem;
+.gender-icon {
+    display: inline-block;
+    width: 0.9rem;
+    height: auto;
+    filter: invert(1);
 }
 
-.icons-box img {
+/* .icons-box img {
     padding: 2px;
+    width: 30px;
     filter: invert();
-}
+} */

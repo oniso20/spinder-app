@@ -1,53 +1,68 @@
-import React, { useState, useEffect } from "react";
-import email from "../assets/email.png";
-import heart from "../assets/heart.png";
-import pfp from "../assets/pfp.png";
+import React, { useEffect } from "react";
+import Spotify from 'react-spotify-embed';
+
+
+// import email from "../assets/email.png";
+// import heart from "../assets/heart.png";
+import pin from "../assets/pin.png";
+import gender from "../assets/gender.png"
+import arrow from "../assets/arrows.png"
+
 import "../styles/ProfileCard.css";
 
-import axios from "axios";
+let songURL = 'https://open.spotify.com/track/3UMrglJeju5yWyYIW6o99b?si=e01586f0f4144b07';
+
 
 const ProfileCard = ({ user }) => {
-  const [userData, setUserData] = useState([]);
-
-  useEffect(() => {
-    axios
-      .get("http://localhost:8000/users")
-      .then((res) => setUserData(res.userData));
-    // console.log(userData);
-  }, []);
+  
   let date =  new Date().getFullYear();
+
   return (
 
     <div className="profile-card">
-      {/* {userData.map(user => key={})} */}
+    
+     <img className="pfp" src={user.url} alt="profile-img" />
 
-      <h3>{user.first_name}</h3>
+     <div className="info-box">
+      <h3>{user.first_name}, {`${date - user.dob_year}`}</h3>
+
+
+      <p><img className="pin" src={pin} alt="location-pin" /> {user.location}</p>
+
+      <img className="pfp" src={user.url} alt="profile-img" />
 
       <img className="pfp" src={user.url} alt={user.first_name} />
 
-      <p>
-        Age: {`${date - user.dob_year}`}, Gender:
-        {user.gender_identity}
-      </p>
-      <p>Location: {user.location}</p>
-      <p>Short intro: {user.about}</p>
 
-      <div className="music-data-box">
-        <p>Lyrics answer: {user.lyrics_melody_preference}</p>
-        <p>Credit song: {user.credit_song_preference}</p>
-        <p>Mood Song: {user.mood_song_preference}</p>
-        <p>
-          Eras array:
-          {user.eras?.map((era, idx) => {
-            return <span key={idx}>{era}</span>;
-          })}
-        </p>
+      {/* <p>Birthday: {`${user.dob_month}, ${user.dob_day}`}</p> */}
+      <p><img className="gender-icon" src={gender} alt="gender-icon" /> {user.gender_identity}</p>
+      <br />
+      <p> {user.about}</p>
+      
       </div>
 
-      <div className="icons-box">
+   
+     <div className="music-data-box">
+        <p>Lyrics or melody?</p>
+        <span><img className="pin" src={arrow} alt="arrow" /> {user.lyrics_melody_preference}</span>
+        <p>End credit song?</p>
+        <span><img className="pin" src={arrow} alt="arrow" /> {user.credit_song_preference}</span>
+        <p>Song to get into the mood?</p>
+        <span><img className="pin" src={arrow} alt="arrow" /> {user.mood_song_preference}</span>
+        <p>Favorite eras of music?</p>
+          {user.eras?.map((era, idx) => {
+            return <span key={idx}> <img className="pin" src={arrow} alt="arrow" />  {era} </span>;
+            })}
+
+      </div>
+      <div className="spotify-box">
+      <Spotify wide link={songURL}/>
+      </div> 
+      {/* <div className="icons-box">
         <img src={email} alt="email" />
         <img src={heart} alt="heart" />
-      </div>
+      </div> */}
+     
     </div>
   );
 };

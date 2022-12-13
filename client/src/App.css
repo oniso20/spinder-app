@@ -45,7 +45,7 @@ p {
 /* BUTTON STYLE */
 
 button {
-  background-image: linear-gradient(to right, #DA22FF 0%, #9733EE  41%, #DA22FF  100%);
+  background-image: linear-gradient(to right, #DA22FF 25%, #4D19E3  50%, #DA22FF 100%);
   padding: 15px;
   width: 120px;
   text-align: center;

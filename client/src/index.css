@@ -3,31 +3,33 @@
   position: absolute;
 }
 
+.matches-display p {
+  margin: 0.5rem;
+}
+
+.matches-display {
+  margin: 0.5rem;
+}
+
+.matches-display .img-container img {
+  height: 100%;
+}
 
 .dashboard {
   width: 70vw;
-  height: 82vh;
+  height: 90vh;
   display: flex;
   flex-direction: row;
   margin: 0 auto;
+  margin-top: 2%;
   border: 1px solid;
   border-radius: 1.5rem;
 }
 
-.dashboard-headline h1 {
-  font-family: var(--logo-font);
-  font-size: 5rem;
-  color: #fdfdfd;
-  margin: 0 0 0 15%;
-  display: inline-block;
-  letter-spacing: 3px;
-}
-
 .dashboard .profile-container {
-  width: 30vw;
+  width: 35vw;
   height: inherit;
 }
-
 
 .dashboard .swipe-container {
   background-color: rgba(255, 255, 255, 0.39);
@@ -66,27 +68,28 @@
 .card {
   background-color: #fff;
   width: 400px;
-  height: 650px;
-  border-radius: 30px;
+  height: 550px;
+  margin-top: 10%;
+  border-radius: 1.8rem;
   background-size: cover;
   background-position: center;
 }
 
 .card h3 {
-  margin-top: 0;
   text-align: center;
+  padding-top: 0.5rem;
 }
 
 .dashboard .swipe-info {
   position: absolute;
-  bottom: 0;
+  bottom: 2%;
   padding: 150px;
 }
 
 /*------ Chat Container -----*/
 
 .chat-container {
-  background-color: rgba(255, 255, 255, 0.39);
+  background-color: rgba(255, 255, 255, 0.4);
   box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
     rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
   width: 100%;
@@ -98,13 +101,19 @@
 }
 
 .chat-container .chat-container-header {
-  background: linear-gradient(45deg, rgb(254, 48, 114), rgb(255, 89, 64));
-  height: 100px;
+  background: linear-gradient(to right, #DA22FF 25%, #4D19E3  95%);
+  height: 65px;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-top-left-radius: 1.5rem;
+  border-top-left-radius: 1.5rem; 
+}
+
+.chat-container button {
+  width: 110px;
+  padding: 10px;
+  margin: 1rem 1.7rem;
 }
 
 .chat-container .option:disabled {
@@ -114,32 +123,56 @@
 .chat-container .log-out-icon {
   display: flex;
   align-items: center;
-  padding: 20px;
+  padding: 15px;
   color: rgb(255, 255, 255);
 }
 
-
 .img-container {
-  height: 60px;
-  width: 60px;
-  border-radius: 15px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
   overflow: hidden;
-  margin: 10px;
+  margin: 5px;
 }
 
 .img-container img {
-  width: 100%;
+  width: 50px;
+  height: 50px;
 }
 
+
+/* ------Chat Display ------- */
+
+
 .chat-display {
-  padding: 2rem;
+  padding: 1rem;
   height: 50vh;
   overflow-y: auto;
-  text-align: center;
+  text-align: left;
+}
+
+.chat-display small {
+  margin-left: 1rem;
 }
 
 .chat-input {
-  padding: 2rem;
+  padding: 1.5rem;
   display: flex;
   flex-direction: column;
 }
+
+
+.chat-input button {
+  width: 110px;
+  padding: 10px;
+  margin: 0 auto;
+  margin-top: 1rem;
+}
+
+.chat-input textarea {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  font-family: var(--main-font);
+}
+
