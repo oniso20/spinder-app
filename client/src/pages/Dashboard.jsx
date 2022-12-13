@@ -90,7 +90,7 @@ const Dashboard = () => {
     getMlUsers();
     getMoodUsers();
     getCreditUsers();
-  }, []);
+  }, [user]);
 
   useEffect(() => {
     // Using the Array.filter() method to create an array of the defined and non-empty genderedUsers, mlUsers, moodUsers, and creditUsers arrays

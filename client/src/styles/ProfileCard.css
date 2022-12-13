@@ -12,7 +12,7 @@ h3 {
 
 .profile-card {
     width: 450px;
-    height: 650px;
+    height: fit-content;
     border-radius: 1rem;
     background-color: rgba(240, 255, 255, 0.336);
     margin: 0 auto;
@@ -38,10 +38,11 @@ h3 {
 
 .spotify-box {
     width: 93%;
+    height: 90px;
     margin: 0 auto;
-    position: absolute;
+    /* position: absolute;
     bottom: 0.5rem;
-    left: 1rem;
+    left: 1rem; */
 }
 
 .profile-card span {
@@ -53,6 +54,7 @@ h3 {
     width: 448px;
     height: 250px;
     border-radius: 1rem;
+    margin-bottom: 1rem;
     /* border: 1px solid white; */
 }
 
@@ -90,8 +92,8 @@ h3 {
     filter: invert(1);
 }
 
-.icons-box img {
+/* .icons-box img {
     padding: 2px;
     width: 30px;
     filter: invert();
-}
+} */

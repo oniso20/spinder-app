@@ -61,16 +61,26 @@
     border: 1px solid white;
     border-radius: 5px;
 }
+
+.radio1 {
+    display: flex;
+    justify-content: left;
+    margin: 0.5rem;
+}
 .radio1 label{
     /* CSS addition for radio button change */
     display: flex;
+    border: 1px solid white;
+    border-radius: 5px;
+    height: 30px;
+    width: 65px;
+    text-align: center;
     margin: 0.2rem;
-    justify-content: space-around;
 }
 
 .radio1 input[type="radio"] {
      /* CSS addition for radio button change */
-    border: none;
+    display: none;
  }
 
 .radio label {
@@ -91,6 +101,14 @@
     background: var(--purple);
 }
 
+.radio1 input[type="radio"]:checked+label,
+.Checked+label {
+    background: var(--purple);
+}
+
+.radio1 label:hover {
+    background: var(--purple);
+}
 
 .form-cont input[type="text"] {
     display: block;

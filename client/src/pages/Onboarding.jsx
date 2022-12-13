@@ -244,7 +244,7 @@ const Onboarding = () => {
                 id="lyrics_preference"
                 type="radio"
                 name="lyrics_melody_preference"
-                value="lyrics"
+                value="Lyrics"
                 onChange={handleChange}
               />
               <label htmlFor="lyrics_preference">Lyrics</label>
@@ -252,7 +252,7 @@ const Onboarding = () => {
                 id="melody_preference"
                 type="radio"
                 name="lyrics_melody_preference"
-                value="melody"
+                value="Melody"
                 onChange={handleChange}
               />
               <label htmlFor="melody_preference">Melody</label>

@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Spotify from 'react-spotify-embed';
+
 
 // import email from "../assets/email.png";
 // import heart from "../assets/heart.png";
@@ -14,13 +15,6 @@ let songURL = 'https://open.spotify.com/track/3UMrglJeju5yWyYIW6o99b?si=e01586f0
 
 const ProfileCard = ({ user }) => {
   
-
-  useEffect(() => {
-    axios
-      .get("http://localhost:8000/users")
-      .then((res) => setUserData(res.userData));
-    // console.log(userData);
-  }, []);
   let date =  new Date().getFullYear();
 
   return (
@@ -30,7 +24,7 @@ const ProfileCard = ({ user }) => {
      <img className="pfp" src={user.url} alt="profile-img" />
 
      <div className="info-box">
-      <h3>{user.first_name}</h3>
+      <h3>{user.first_name}, {`${date - user.dob_year}`}</h3>
 
 
       <p><img className="pin" src={pin} alt="location-pin" /> {user.location}</p>
@@ -40,22 +34,15 @@ const ProfileCard = ({ user }) => {
       <img className="pfp" src={user.url} alt={user.first_name} />
 
 
-      <p>Birthday: {`${user.dob_month}, ${user.dob_day}`}</p>
+      {/* <p>Birthday: {`${user.dob_month}, ${user.dob_day}`}</p> */}
       <p><img className="gender-icon" src={gender} alt="gender-icon" /> {user.gender_identity}</p>
       <br />
       <p> {user.about}</p>
       
       </div>
 
-      <p>
-        Age: {`${date - user.dob_year}`}, Gender:
-        {user.gender_identity}
-      </p>
-      <p>Location: {user.location}</p>
-      <p>Short intro: {user.about}</p>
-
-
-      <div className="music-data-box">
+   
+     <div className="music-data-box">
         <p>Lyrics or melody?</p>
         <span><img className="pin" src={arrow} alt="arrow" /> {user.lyrics_melody_preference}</span>
         <p>End credit song?</p>
