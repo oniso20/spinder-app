@@ -25,7 +25,7 @@ const MatchesDisplay = ({ matches, setClickedUser }) => {
 
   useEffect(() => {
     getMatches();
-  }, []);
+  }, [matches]);
 
   return (
     <div className="matches-display">
