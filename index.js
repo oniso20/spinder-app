@@ -334,7 +334,13 @@ app.get("*", function (_, res) {
     );
 });
 
-app.listen(PORT, HOST, () => {
-    console.log(`Server at ${HOST}:${PORT} is listening...`);
-})
+client.connect(err => {
+    if (err) { console.error(err); return false; }
+    // connection to mongo is successful, listen for requests
+    app.listen(PORT, HOST, () => {
+        console.log(`Server at ${HOST}:${PORT} is listening...`);
+    });
+});
+
+
 
