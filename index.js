@@ -13,6 +13,8 @@ require('dotenv').config();
 
 const uri = process.env.URI;
 
+const path = require('path');
+
 const app = express();
 app.use(cors());
 app.use(express.json());
@@ -111,7 +113,6 @@ app.get('/user', async (req, res) => {
 app.get('/users', async (req, res) => {
     const client = new MongoClient(uri);
     const userIds = req.query.userIds;
-    console.log(userIds);
 
     try {
         await client.connect();
@@ -164,11 +165,8 @@ app.get('/gendered-users', async (req, res) => {
         await client.connect();
         const database = client.db('spinder-data');
         const users = database.collection('users');
-        console.log("Gender in query: ", gender); // Log the value of the gender variable in the query
-        const query = { gender_identity: { $eq: 'male' } };
+        const query = { gender_identity: { $eq: gender } };
         const foundUsers = await users.find(query).toArray();
-
-        console.log("Users found: ", foundUsers); // Log the users found by the query
 
         res.send(foundUsers);
     } finally {
@@ -323,6 +321,17 @@ app.post('/message', async (req, res) => {
     } finally {
         await client.close();
     }
+});
+
+//  Serving the frontend
+app.use(express.static(path.join(__dirname, "./client/build")));
+app.get("*", function (_, res) {
+    res.sendFile(
+        path.join(__dirname, "./client/build/index.html"),
+        function (err) {
+            res.status(500).send(err);
+        }
+    );
 });
 
 app.listen(PORT, HOST, () => {

@@ -11,7 +11,8 @@ const MatchesDisplay = ({ matches, setClickedUser }) => {
 
   const getMatches = async () => {
     try {
-      const response = await axios.get("http://localhost:8000/users", {
+      // removed http://localhost:8000
+      const response = await axios.get("/users", {
         params: {
           userIds: matchedUserIds,
           filter: { user_id: { $in: matchedUserIds } },

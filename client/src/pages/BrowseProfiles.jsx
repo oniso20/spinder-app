@@ -21,7 +21,8 @@ const BrowseProfiles = () => {
 
   const getUser = async (userId) => {
     try {
-      const response = await axios.get("http://localhost:8000/user", {
+      // removed http://localhost:8000
+      const response = await axios.get("/user", {
         params: { userId },
       });
       setUser(response.data);
@@ -32,7 +33,8 @@ const BrowseProfiles = () => {
 
   const getGenderedUsers = async () => {
     try {
-      const response = await axios.get("http://localhost:8000/gendered-users", {
+      // removed http://localhost:8000
+      const response = await axios.get("/gendered-users", {
         params: { gender: user?.gender_interest },
       });
       setGenderedUsers(response.data);
@@ -45,7 +47,8 @@ const BrowseProfiles = () => {
   const getMlUsers = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:8000/ml-preference-users",
+        // removed http://localhost:8000
+        "/ml-preference-users",
         {
           params: { ml: user?.lyrics_melody_preference },
         }
@@ -59,7 +62,8 @@ const BrowseProfiles = () => {
   const getMoodUsers = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:8000/mood-preference-users",
+        // removed http://localhost:8000
+        "/mood-preference-users",
         {
           params: { mood: user?.mood_song_preference },
         }
@@ -73,7 +77,8 @@ const BrowseProfiles = () => {
   const getCreditUsers = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:8000/credit-preference-users",
+        // removed http://localhost:8000
+        "/credit-preference-users",
         {
           params: { credit: user?.credit_song_preference },
         }
@@ -112,7 +117,8 @@ const BrowseProfiles = () => {
 
   const matchesUpdate = async (matchedUserId) => {
     try {
-      await axios.put("http://localhost:8000/addmatch", {
+      // removed http://localhost:8000
+      await axios.put("/addmatch", {
         userId,
         matchedUserId,
       });

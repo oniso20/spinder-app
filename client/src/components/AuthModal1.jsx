@@ -32,7 +32,8 @@ const AuthModal1 = ({ setShowModal, setIsSignUp, isSignUp }) => {
         return;
       } else {
         const response = await axios.post(
-          `http://localhost:8000/${isSignUp ? "signup" : "login"}`,
+          // removed http://localhost:8000
+          `/${isSignUp ? "signup" : "login"}`,
           {
             email,
             password,
