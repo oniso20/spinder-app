@@ -33,7 +33,7 @@ const Onboarding = () => {
     e.preventDefault();
     try {
       // removed http://localhost:8000
-      const response = await axios.put("/user", {
+      const response = await axios.put("https://spinder-api.cyclic.app/user", {
         formData,
       });
       const success = response.status === 200;

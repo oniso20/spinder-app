@@ -12,7 +12,7 @@ const MatchesDisplay = ({ matches, setClickedUser }) => {
   const getMatches = async () => {
     try {
       // removed http://localhost:8000
-      const response = await axios.get("/users", {
+      const response = await axios.get("https://spinder-api.cyclic.app/users", {
         params: {
           userIds: matchedUserIds,
           filter: { user_id: { $in: matchedUserIds } },

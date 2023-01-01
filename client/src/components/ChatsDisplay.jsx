@@ -12,9 +12,12 @@ const ChatsDisplay = ({ user, clickedUser }) => {
   const getUsersMessages = async () => {
     try {
       // removed http://localhost:8000
-      const response = await axios.get("/messages", {
-        params: { userId: userId, correspondingUserId: clickedUserId },
-      });
+      const response = await axios.get(
+        "https://spinder-api.cyclic.app/messages",
+        {
+          params: { userId: userId, correspondingUserId: clickedUserId },
+        }
+      );
       setUsersMessages(response.data);
     } catch (error) {
       console.log(error);
@@ -24,9 +27,12 @@ const ChatsDisplay = ({ user, clickedUser }) => {
   const getClickedUsersMessages = async () => {
     try {
       // removed http://localhost:8000
-      const response = await axios.get("/messages", {
-        params: { userId: clickedUserId, correspondingUserId: userId },
-      });
+      const response = await axios.get(
+        "https://spinder-api.cyclic.app/messages",
+        {
+          params: { userId: clickedUserId, correspondingUserId: userId },
+        }
+      );
       setClickedUsersMessages(response.data);
     } catch (error) {
       console.log(error);

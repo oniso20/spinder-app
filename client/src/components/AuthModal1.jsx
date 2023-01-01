@@ -33,7 +33,7 @@ const AuthModal1 = ({ setShowModal, setIsSignUp, isSignUp }) => {
       } else {
         const response = await axios.post(
           // removed http://localhost:8000
-          `/${isSignUp ? "signup" : "login"}`,
+          `https://spinder-api.cyclic.app/${isSignUp ? "signup" : "login"}`,
           {
             email,
             password,

@@ -22,7 +22,7 @@ const BrowseProfiles = () => {
   const getUser = async (userId) => {
     try {
       // removed http://localhost:8000
-      const response = await axios.get("/user", {
+      const response = await axios.get("https://spinder-api.cyclic.app/user", {
         params: { userId },
       });
       setUser(response.data);
@@ -34,9 +34,12 @@ const BrowseProfiles = () => {
   const getGenderedUsers = async () => {
     try {
       // removed http://localhost:8000
-      const response = await axios.get("/gendered-users", {
-        params: { gender: user?.gender_interest },
-      });
+      const response = await axios.get(
+        "https://spinder-api.cyclic.app/gendered-users",
+        {
+          params: { gender: user?.gender_interest },
+        }
+      );
       setGenderedUsers(response.data);
     } catch (error) {
       console.log(error);
@@ -48,7 +51,7 @@ const BrowseProfiles = () => {
     try {
       const response = await axios.get(
         // removed http://localhost:8000
-        "/ml-preference-users",
+        "https://spinder-api.cyclic.app/ml-preference-users",
         {
           params: { ml: user?.lyrics_melody_preference },
         }
@@ -63,7 +66,7 @@ const BrowseProfiles = () => {
     try {
       const response = await axios.get(
         // removed http://localhost:8000
-        "/mood-preference-users",
+        "https://spinder-api.cyclic.app/mood-preference-users",
         {
           params: { mood: user?.mood_song_preference },
         }
@@ -78,7 +81,7 @@ const BrowseProfiles = () => {
     try {
       const response = await axios.get(
         // removed http://localhost:8000
-        "/credit-preference-users",
+        "https://spinder-api.cyclic.app/credit-preference-users",
         {
           params: { credit: user?.credit_song_preference },
         }
@@ -118,7 +121,7 @@ const BrowseProfiles = () => {
   const matchesUpdate = async (matchedUserId) => {
     try {
       // removed http://localhost:8000
-      await axios.put("/addmatch", {
+      await axios.put("https://spinder-api.cyclic.app/addmatch", {
         userId,
         matchedUserId,
       });
