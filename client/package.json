@@ -16,7 +16,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start:frontend": "react-scripts start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -43,11 +43,8 @@
     "@react-spring/web": "^9.5.5",
     "axios": "^1.2.0",
     "react-cookie": "^4.1.1",
-
     "react-spotify-embed": "^1.0.4",
-
     "react-panresponder-web": "^1.0.2",
-
     "react-tinder-card": "^1.6.2"
   }
 }
