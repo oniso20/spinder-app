@@ -17,7 +17,8 @@ const Dash = () => {
 
   const getUser = async (userId) => {
     try {
-      const response = await axios.get("http://localhost:8000/user", {
+      // removed http://localhost:8000
+      const response = await axios.get("https://spinder-api.cyclic.app/user", {
         params: { userId },
       });
       setUser(response.data);

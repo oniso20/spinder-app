@@ -11,7 +11,8 @@ const MatchesDisplay = ({ matches, setClickedUser }) => {
 
   const getMatches = async () => {
     try {
-      const response = await axios.get("http://localhost:8000/users", {
+      // removed http://localhost:8000
+      const response = await axios.get("https://spinder-api.cyclic.app/users", {
         params: {
           userIds: matchedUserIds,
           filter: { user_id: { $in: matchedUserIds } },
@@ -25,7 +26,7 @@ const MatchesDisplay = ({ matches, setClickedUser }) => {
 
   useEffect(() => {
     getMatches();
-  }, []);
+  }, [matches]);
 
   return (
     <div className="matches-display">

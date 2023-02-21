@@ -32,7 +32,8 @@ const Onboarding = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.put("http://localhost:8000/user", {
+      // removed http://localhost:8000
+      const response = await axios.put("https://spinder-api.cyclic.app/user", {
         formData,
       });
       const success = response.status === 200;
@@ -65,14 +66,13 @@ const Onboarding = () => {
 
   const handleInput = (e) => {
     if (formData.dob_year.length > 4) {
-      e.target.value = e.target.value.slice(0, 4)
-    } else if (formData.dob_day.length > 2 || formData.dob_month.length > 2 ) {
-      e.target.value = e.target.value.slice(0, 2)
+      e.target.value = e.target.value.slice(0, 4);
+    } else if (formData.dob_day.length > 2 || formData.dob_month.length > 2) {
+      e.target.value = e.target.value.slice(0, 2);
     } else {
-      return e.target.value
-    } 
-  }
-  
+      return e.target.value;
+    }
+  };
 
   return (
     <>
@@ -240,23 +240,23 @@ const Onboarding = () => {
                 Lyrics or melody, which is more important to you?
               </label>
               <div className="radio1">
-              <input
-                id="lyrics_preference"
-                type="radio"
-                name="lyrics_melody_preference"
-                value="Lyrics"
-                onChange={handleChange}
-              />
-              <label htmlFor="lyrics_preference">Lyrics</label>
-              <input
-                id="melody_preference"
-                type="radio"
-                name="lyrics_melody_preference"
-                value="Melody"
-                onChange={handleChange}
-              />
-              <label htmlFor="melody_preference">Melody</label>
-            </div>
+                <input
+                  id="lyrics_preference"
+                  type="radio"
+                  name="lyrics_melody_preference"
+                  value="Lyrics"
+                  onChange={handleChange}
+                />
+                <label htmlFor="lyrics_preference">Lyrics</label>
+                <input
+                  id="melody_preference"
+                  type="radio"
+                  name="lyrics_melody_preference"
+                  value="Melody"
+                  onChange={handleChange}
+                />
+                <label htmlFor="melody_preference">Melody</label>
+              </div>
             </div>
 
             <div>

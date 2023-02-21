@@ -20,7 +20,8 @@ const ChatInput = ({
     };
 
     try {
-      await axios.post("http://localhost:8000/message", { message });
+      // removed http://localhost:8000
+      await axios.post("https://spinder-api.cyclic.app/message", { message });
       getUserMessages();
       getClickedUsersMessages();
       setTextArea("");
