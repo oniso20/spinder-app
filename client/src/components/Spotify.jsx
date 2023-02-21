@@ -2,8 +2,7 @@ import React, { useState, useEffect } from "react";
 import queryString from "query-string";
 import axios from "axios";
 
-const clientId = "d58deafe30da46acae3bde80bd045155";
-const redirectUri = "http://localhost:3000/dash";
+const redirectUri = "https://spinder.netlify.app/dash";
 const scopes = ["user-read-playback-state", "user-library-read", "user-top-read"];
 
 const Spotify = () => {
@@ -13,7 +12,7 @@ const Spotify = () => {
 
 
   const handleLogin = () => {
-    const redirectToSpotify = `https://accounts.spotify.com/authorize?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes.join(
+    const redirectToSpotify = `https://accounts.spotify.com/authorize?client_id=${process.env.REACT_APP_SPOTIFY_ID}&redirect_uri=${redirectUri}&scope=${scopes.join(
       "%20"
     )}&response_type=token`;
     window.location.href = redirectToSpotify;
