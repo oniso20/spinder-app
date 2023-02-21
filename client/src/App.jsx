@@ -9,6 +9,7 @@ import Layout from "./pages/Layout";
 import Onboarding from "./pages/Onboarding";
 import ChatContainer from "./components/ChatContainer";
 import BrowseProfiles from "./pages/BrowseProfiles";
+import Music from "./components/Music";
 // import AuthModal1 from "./components/AuthModal1";
 // import Auth from "./components/Auth";
 // import { useUserContext } from "./context/UserContext";
@@ -28,6 +29,7 @@ const App = () => {
           {authToken && <Route path="/onboarding" element={<Onboarding />} />}
           {authToken && <Route path="/browse" element={<BrowseProfiles />} />}
           {authToken && <Route path="/dash" element={<Dash />} />}
+          <Route path="/music" element={<Music />} />
           <Route path="/chatcontainer" element={<ChatContainer />} />
 
           {/* <Route path="/auth" element={<AuthModal1 />} /> */}

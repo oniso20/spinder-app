@@ -1,16 +1,12 @@
-import React, { useEffect } from "react";
-import Spotify from 'react-spotify-embed';
+import React from "react";
+// import Spotify from 'react-spotify-embed';
+import Spotify from "./Spotify";
 
-
-// import email from "../assets/email.png";
-// import heart from "../assets/heart.png";
 import pin from "../assets/pin.png";
 import gender from "../assets/gender.png"
 import arrow from "../assets/arrows.png"
 
 import "../styles/ProfileCard.css";
-
-let songURL = 'https://open.spotify.com/track/3UMrglJeju5yWyYIW6o99b?si=e01586f0f4144b07';
 
 
 const ProfileCard = ({ user }) => {
@@ -56,12 +52,8 @@ const ProfileCard = ({ user }) => {
 
       </div>
       <div className="spotify-box">
-      <Spotify wide link={songURL}/>
+      <Spotify />
       </div> 
-      {/* <div className="icons-box">
-        <img src={email} alt="email" />
-        <img src={heart} alt="heart" />
-      </div> */}
      
     </div>
   );

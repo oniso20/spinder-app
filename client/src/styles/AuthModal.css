@@ -3,7 +3,7 @@
     width: 30vw;
     max-width: 40vw;
     height: 65vh;
-    background: linear-gradient(to right, #DA22FF 0%, #9733EE  41%, #DA22FF  100%); 
+    background: linear-gradient(45deg, #DA22FF, #9733EE); 
     border-radius: 1rem;
     color: var(--white-color);
     position: absolute;

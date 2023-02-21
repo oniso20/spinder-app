@@ -36,15 +36,6 @@ h3 {
     line-height: 1rem;
 }
 
-.spotify-box {
-    width: 93%;
-    height: 90px;
-    margin: 0 auto;
-    /* position: absolute;
-    bottom: 0.5rem;
-    left: 1rem; */
-}
-
 .profile-card span {
     margin: 0 0.2rem 1rem 1rem;
     font-size: 0.8rem;
@@ -53,24 +44,14 @@ h3 {
 .music-data-box {
     width: 448px;
     height: 250px;
-    border-radius: 1rem;
-    margin-bottom: 1rem;
-    /* border: 1px solid white; */
+    /* border-radius: 1rem;
+    border: 1px solid white; */
 }
-
-/* .icons-box {
-    width: 75px;
-    height: 35px;
-    /* border: 1px solid white; */
-    /*position: absolute;
-    bottom: 0.2rem;
-    right: 0;
-} */
 
 /* IMAGES & ICONS */
 
 .pfp {
-    width: 200px;
+    width: 180px;
     height: auto;
     border-radius: 1rem;
     position: absolute;
@@ -92,8 +73,71 @@ h3 {
     filter: invert(1);
 }
 
-/* .icons-box img {
-    padding: 2px;
-    width: 30px;
-    filter: invert();
-} */
+/* SPOTIFY LINK */
+
+.spotify-btn {
+    width: 180px;
+    font-size: .7rem;
+}
+
+.spotify-box {
+    /* border: 1px solid white;
+    border-radius: 1rem; */
+    height: 4rem;
+    position: relative;
+}
+
+.current-track button {
+    position: absolute;
+    left: -.5rem;
+    bottom: -2rem;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    z-index: 99;
+}
+
+.tooltip {
+    position: relative; 
+    border-bottom: 1px dashed #000; 
+  }
+
+  .tooltip:before {
+    content: attr(data-text); 
+    position: absolute;
+    bottom: -50%;
+    transform: translateY(-10%);
+    width: 200px;
+    padding: 10px;
+    border-radius: 1rem;
+    background: rgba(255, 255, 255, 0.35);
+    color: rgb(75, 75, 75);
+    text-align: center;
+    display: none;
+}
+
+  .tooltip:hover:before {
+    display:block;
+  }
+
+  .recs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 3rem;
+    width: 75vw;
+    margin: 0 auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.music-recs {
+    text-align: center;
+    margin: 3rem;
+}
+
+.music-recs p {
+    margin: 2rem;
+}
+
+
