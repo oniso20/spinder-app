@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Ubuntu&display=swap');
+
+:root {
+  --main-font: 'Ubuntu', sans-serif;
+  --logo-font: 'Lobster', cursive;
+  --white-color: #fdfdfde2;
+  --purple: #DA22FF;
+  --dark-purple: #9733EE;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overscroll-behavior: none;
+}
+
+body {
+  background: url(imgs/abstract-purple2.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  background-attachment: fixed;
+}
+
+h1 {
+  font-family: var(--logo-font);
+  font-size: 5rem;
+  color: #fdfdfd;
+  letter-spacing: 5px;
+}
+
+h3 {
+  font-family: var(--main-font);
+  color: var(--white-color);
+  display: inline-block;
+}
+
+p {
+  font-family: var(--main-font);
+  color: var(--white-color);
+}
+
+/* BUTTON STYLE */
+
+button {
+  background-image: linear-gradient(to right, #DA22FF 25%, #4D19E3  50%, #DA22FF 100%);
+  padding: 15px;
+  width: 120px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  /* background-size: 200% auto; */
+  color: white;            
+  border-radius: 10px;
+  border: none;
+  font-family: var(--main-font);
+  letter-spacing: 2px;
+}
+
+button:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+

@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Ubuntu&display=swap');
+
+:root {
+  --main-font: 'Ubuntu', sans-serif;
+  --logo-font: 'Lobster', cursive;
+  --white-color: #fdfdfde2;
+  --purple: #DA22FF;
+  --dark-purple: #9733EE;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overscroll-behavior: none;
+}
+
+/* Please do not hide overflow until we are done with styling */
+/* body {
+  overflow: hidden;
+} */
+
+
+html {
+  background: url(../assets/abstract-purple2.jpg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.wrapper h1 {
+  font-family: var(--logo-font);
+  font-size: 5rem;
+  color: #fdfdfd;
+  margin: 0 0 0 5%;
+  display: inline-block;
+  letter-spacing: 4px;
+}
+
+.wrapper h3 {
+  font-family: var(--main-font);
+  margin: 7% 0 0 5%;
+  color: var(--white-color);
+  font-size: 2rem;
+  letter-spacing: 2px;
+  display: inline-block;
+}
+
+.wrapper p {
+  font-family: var(--main-font);
+  margin: 10% 0 0 5%;
+  color: var(--white-color);
+  font-size: 1rem;
+  letter-spacing: 1px;
+  display: inline-block;
+  line-height: 1.5rem;
+}
+
+/* IMAGES */
+
+.wrapper {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+.intro-text {
+
+  width: 35vw;
+  height: 60vh;
+  margin: 7% 0 0 10%;
+}
+
+.intro-img {
+  position: relative;
+  max-width: 65vw;
+  margin: 0 auto;
+  width: 50vw;
+  height: 80vh;
+  margin: 5% 0 0 10%;
+}
+
+.couple-img,
+.couple2-img,
+.couple3-img {
+  width: 400px;
+  border-radius: 74% 26% 77% 23% / 44% 60% 40% 56%;
+  opacity: 0.8;
+}
+
+.couple-img {
+  transform: rotate(9deg);
+  position: absolute;
+  top: 0;
+  left: 7%;
+}
+
+.couple2-img {
+  transform: rotate(-5deg);
+  position: absolute;
+  top: 25%;
+  left: -10%;
+  z-index: 1;
+
+}
+
+.couple3-img {
+  transform: rotate(25deg);
+  position: absolute;
+  top: 45%;
+  left: 10%;
+  z-index: 0;
+}
+
+/* BUTTONS */
+
+button {
+  /* background-image: linear-gradient(to right, #DA22FF 0%, #9733EE 41%, #DA22FF 100%); */
+  background-image: linear-gradient(to right, #DA22FF 25%, #4D19E3  50%, #DA22FF 100%);
+  padding: 15px;
+  width: 150px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  border-radius: 10px;
+  border: none;
+  font-family: var(--main-font); 
+  letter-spacing: 2px;
+  margin: 2rem 2rem 0 0;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.259);
+}
+
+button:hover {
+  background-position: right center;
+  /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+.btns {
+  margin: 3rem 0 0 1.5rem;
+}
+
