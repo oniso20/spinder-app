@@ -1,9 +1,6 @@
 import React from "react";
 import Spotify from './Spotify';
 
-
-import React, { useEffect } from "react";
-import Spotify from 'react-spotify-embed';
 import pin from "../assets/pin.png";
 import gender from "../assets/gender.png"
 import arrow from "../assets/arrows.png"

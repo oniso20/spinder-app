@@ -4,15 +4,9 @@ import '../styles/Nav.css';
 
 import homeImg from '../assets/home.svg';
 
-// import searchImg from '../assets/search.svg';
 import profileImg from '../assets/portrait.svg';
 import musicImg from '../assets/music-alt.svg';
-// import matchImg from '../assets/following.svg';
 
-// import searchImg from '../assets/search.svg';
-import profileImg from '../assets/portrait.svg';
-import musicImg from '../assets/music-alt.svg';
-// import matchImg from '../assets/following.svg';
 
 import chat from '../assets/chat.png'
 

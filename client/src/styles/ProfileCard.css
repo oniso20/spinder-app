@@ -11,20 +11,13 @@ h3 {
 /* CARD CONTAINER */
 
 .profile-card {
-<<<<<<< HEAD
     width: 500px;
-=======
-    width: 450px;
->>>>>>> 3c9ed8c4d5b0c81bc771a18e5e97e08d8f47b13b
     height: fit-content;
     border-radius: 1rem;
     background-color: rgba(240, 255, 255, 0.336);
     margin: 0 auto;
     margin-top: -5%;
-<<<<<<< HEAD
     margin-bottom: 3rem;
-=======
->>>>>>> 3c9ed8c4d5b0c81bc771a18e5e97e08d8f47b13b
     border: 2px solid rgba(255, 255, 255, 0.444);
     position: relative;
 }  
@@ -44,14 +37,7 @@ h3 {
     line-height: 1rem;
 }
 
-<<<<<<< HEAD
-/* .spotify-box {
-    width: 93%;
-    height: 90px;
-    margin: 0 auto;
- 
-} */
-=======
+
 .spotify-box {
     width: 93%;
     height: 90px;
@@ -60,7 +46,7 @@ h3 {
     bottom: 0.5rem;
     left: 1rem; */
 }
->>>>>>> 3c9ed8c4d5b0c81bc771a18e5e97e08d8f47b13b
+
 
 .profile-card span {
     margin: 0 0.2rem 1rem 1rem;
@@ -75,17 +61,8 @@ h3 {
     /* border: 1px solid white; */
 }
 
-<<<<<<< HEAD
-=======
-/* .icons-box {
-    width: 75px;
-    height: 35px;
-    /* border: 1px solid white; */
-    /*position: absolute;
-    bottom: 0.2rem;
-    right: 0;
-} */
->>>>>>> 3c9ed8c4d5b0c81bc771a18e5e97e08d8f47b13b
+
+
 
 /* IMAGES & ICONS */
 
@@ -96,10 +73,7 @@ h3 {
     position: absolute;
     right: 1rem;
     top: 1rem;
-<<<<<<< HEAD
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-=======
->>>>>>> 3c9ed8c4d5b0c81bc771a18e5e97e08d8f47b13b
 }
 
 .pin {
@@ -116,7 +90,7 @@ h3 {
     filter: invert(1);
 }
 
-<<<<<<< HEAD
+
 /* SPOTIFY LINK */
 
 .spotify-btn {
@@ -184,10 +158,4 @@ h3 {
 .music-recs p {
     margin: 2rem;
 }
-=======
-/* .icons-box img {
-    padding: 2px;
-    width: 30px;
-    filter: invert();
-} */
->>>>>>> 3c9ed8c4d5b0c81bc771a18e5e97e08d8f47b13b
+
