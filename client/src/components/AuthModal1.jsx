@@ -1,5 +1,7 @@
 import React, { useState } from "react";
-// import { sendSignInLinkToEmail } from "firebase/auth";
+
+import { sendSignInLinkToEmail } from "firebase/auth";
+
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useCookies } from "react-cookie";

@@ -12,6 +12,7 @@ import BrowseProfiles from "./pages/BrowseProfiles";
 import Music from "./components/Music";
 
 
+
 const App = () => {
   const [cookies, setCookie, removeCookie] = useCookies(["user"]);
 

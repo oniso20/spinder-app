@@ -41,11 +41,19 @@ nav a {
 
 .icon:hover {
     transform: scale(1.2);
+<<<<<<< HEAD
     filter:invert(1) drop-shadow(.1rem .1rem .3rem rgb(255, 255, 255));
 }
 
 nav li:hover img, .active img {
     filter: invert(1) drop-shadow(.1rem .1rem .3rem rgb(255, 255, 255));
+=======
+    filter:invert(1) drop-shadow(0.5rem 0.5rem 0.5rem rgb(0, 0, 0));
+}
+
+nav li:hover img, .active img {
+    filter: invert(1) drop-shadow(0.5rem 0.5rem 0.5rem rgb(0, 0, 0));
+>>>>>>> 3c9ed8c4d5b0c81bc771a18e5e97e08d8f47b13b
 }
 
 nav img {

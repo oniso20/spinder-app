@@ -130,7 +130,10 @@ button {
   font-family: var(--main-font); 
   letter-spacing: 2px;
   margin: 2rem 2rem 0 0;
+<<<<<<< HEAD
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.259);
+=======
+>>>>>>> 3c9ed8c4d5b0c81bc771a18e5e97e08d8f47b13b
 }
 
 button:hover {
