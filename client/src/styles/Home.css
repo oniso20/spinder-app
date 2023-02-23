@@ -130,6 +130,8 @@ button {
   font-family: var(--main-font); 
   letter-spacing: 2px;
   margin: 2rem 2rem 0 0;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.259);
+
 }
 
 button:hover {
