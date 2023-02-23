@@ -6,6 +6,7 @@ import axios from "axios";
 const redirectUri = "https://spinder.netlify.app/dash";
 // const redirectUri = "http://localhost:3000/dash";
 
+
 const scopes = ["user-read-playback-state", "user-library-read", "user-top-read"];
 
 const Spotify = () => {
