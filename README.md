@@ -20,4 +20,14 @@ Email: tester@spinder.com
 
 Password: test
 
-## Technologies Used ![mern](https://user-images.githubusercontent.com/77112303/222419538-8d63681b-526b-4f77-b1ea-eda1d3102fbd.png) ## Landing Page screenshot ![Näyttökuva 2023-3-2 kello 12 09 05](https://user-images.githubusercontent.com/77112303/222420827-4e55158d-ce25-4484-9363-cba82aa70448.png) ## Project Authors/Contributors [Jenni Alanko](https://github.com/kirpister) | [Alexander Otulugbu](https://github.com/BPharoh) | [Onis Emem](https://github.com/oniso20)
+## Technologies Used 
+
+![mern](https://user-images.githubusercontent.com/77112303/222419538-8d63681b-526b-4f77-b1ea-eda1d3102fbd.png) 
+
+## Landing Page screenshot 
+
+![Näyttökuva 2023-3-2 kello 12 09 05](https://user-images.githubusercontent.com/77112303/222420827-4e55158d-ce25-4484-9363-cba82aa70448.png) 
+
+## Project Authors/Contributors 
+
+[Jenni Alanko](https://github.com/kirpister) | [Alexander Otulugbu](https://github.com/BPharoh) | [Onis Emem](https://github.com/oniso20)
