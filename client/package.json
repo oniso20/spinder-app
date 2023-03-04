@@ -13,7 +13,9 @@
     "react-router-dom": "^6.4.4",
     "react-scripts": "5.0.1",
     "spotify-web-api-js": "^1.5.2",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "react-spotify-embed": "^1.0.4",
+    "react-tinder-card": "^1.6.2"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -41,10 +43,7 @@
   },
   "devDependencies": {
     "@react-spring/web": "^9.5.5",
-    "axios": "^1.2.0",
     "react-cookie": "^4.1.1",
-    "react-panresponder-web": "^1.0.2",
-    "react-spotify-embed": "^1.0.4",
-    "react-tinder-card": "^1.6.2"
+    "react-panresponder-web": "^1.0.2"
   }
 }

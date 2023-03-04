@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 
-// import { sendSignInLinkToEmail } from "firebase/auth";
-
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useCookies } from "react-cookie";
@@ -17,7 +15,7 @@ const AuthModal1 = ({ setShowModal, setIsSignUp, isSignUp }) => {
 
   let navigate = useNavigate();
 
-  console.log(email, password, confirmPassword);
+  // console.log(email, password, confirmPassword);
 
   const handleClick = () => {
     setShowModal(false);

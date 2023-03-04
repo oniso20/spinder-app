@@ -11,7 +11,7 @@ h3 {
 /* CARD CONTAINER */
 
 .profile-card {
-    width: 500px;
+    width: 600px;
     height: fit-content;
     border-radius: 1rem;
     background-color: rgba(240, 255, 255, 0.336);
@@ -23,42 +23,45 @@ h3 {
 }  
 
 .profile-card .info-box {
-    width: 225px;
-    height: 300px;
+    width: 350px;
+    height: fit-content;
     /* border: 1px solid white; */
     border-radius: 1rem;
+    margin-bottom: 4rem;
 }
 
 .profile-card p {
     margin: 0.7rem 0.2rem 0.7rem 1rem;
-    line-height: 0.6rem;
+    line-height: 1.5;
     display: block;
-    font-size: 0.9rem;
+    font-size: 1rem;
     line-height: 1rem;
 }
 
-
-.spotify-box {
-    width: 93%;
-    height: 90px;
-    margin: 0 auto;
-    /* position: absolute;
-    bottom: 0.5rem;
-    left: 1rem; */
+.user-info {
+    opacity: 0.9;
 }
 
+.profile-card .user-about {
+    font-size: 1.2rem;
+    line-height: 1.2;
+}
 
 .profile-card span {
     margin: 0 0.2rem 1rem 1rem;
-    font-size: 0.8rem;
+    font-size: 1.2rem;
 }
 
 .music-data-box {
     width: 448px;
-    height: 250px;
-    border-radius: 1rem;
-    margin-bottom: 1rem;
+    height: fit-content;
+    /* border-radius: 1rem; */
+    margin-bottom: 2rem;
     /* border: 1px solid white; */
+}
+
+.music-data-box p {
+    opacity: .9;
 }
 
 
@@ -69,7 +72,7 @@ h3 {
 .pfp {
     width: 200px;
     height: auto;
-    border-radius: 1rem;
+    border-radius: .6rem;
     position: absolute;
     right: 1rem;
     top: 1rem;
@@ -94,8 +97,9 @@ h3 {
 /* SPOTIFY LINK */
 
 .spotify-btn {
-    width: 180px;
-    font-size: .7rem;
+    width: 200px;
+    font-size: .8rem;
+    margin-left: 1rem;
 }
 
 .spotify-box {
@@ -107,7 +111,7 @@ h3 {
 
 .current-track button {
     position: absolute;
-    left: -.5rem;
+    left: -2rem;
     bottom: -2rem;
     border: none;
     background: transparent;
@@ -124,15 +128,16 @@ h3 {
   .tooltip:before {
     content: attr(data-text); 
     position: absolute;
-    bottom: -50%;
-    transform: translateY(-10%);
-    width: 200px;
+    bottom: -60%;
+    transform: translateY(-30%);
+    width: 350px;
     padding: 10px;
     border-radius: 1rem;
     background: rgba(255, 255, 255, 0.35);
     color: rgb(75, 75, 75);
     text-align: center;
     display: none;
+    font-size: 1rem;
 }
 
   .tooltip:hover:before {

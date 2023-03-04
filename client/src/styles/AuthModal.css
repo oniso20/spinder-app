@@ -2,7 +2,7 @@
     z-index: 99;
     width: 30vw;
     max-width: 40vw;
-    height: 65vh;
+    height: fit-content;
     background: linear-gradient(45deg, #da22ff, #9733ee); 
      border-radius: 1rem;
     color: var(--white-color);
@@ -27,6 +27,7 @@
     margin: 3rem;
     text-align: center;
     letter-spacing: 2px;
+    font-size: 1.5rem;
 }
 
 .auth-modal .closeIcon {
@@ -49,6 +50,7 @@
     border-radius: 5px;
     border: none;
     width: 200px;
+    font-family: var(--main-font);
 }
 
 .form-signup input::placeholder {

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useCookies } from "react-cookie";
+import { NavLink } from "react-router-dom";
 
 import AuthModal1 from "../components/AuthModal1";
 
@@ -33,24 +34,26 @@ const Home = () => {
   return (
     
     <div className="wrapper">
+
       {/* <Nav /> */}
 
       <div className="intro-text">
         <h1>Spinder!</h1>
 
-        <h3>Welcome to Spinder!</h3>
+        <h3>Connect through music.</h3>
         <p>
-          Connect through music! <br />
           Looking for a gig buddy? Someone to take road trips with without
-          having to argue over the playlist? <br />
-          Maybe something more? <br />
-          <br />
-          This is the place for you.
-        </p>
+          having to argue over the playlist? 
+          Maybe something more?  </p>
+  
+          <p>This is the place for <em>you.</em></p>
+
 
         <div className="btns">
           <button onClick={handleClick}>SIGN UP</button>
           <button onClick={handleLogIn}>LOGIN</button>
+
+          <div className="about-spinder"><NavLink to="/about">Learn more about Spinder?</NavLink></div>
         </div>
       </div>
 

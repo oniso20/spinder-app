@@ -23,17 +23,17 @@ const ProfileCard = ({ user }) => {
       <h3>{user.first_name}, {`${date - user.dob_year}`}</h3>
 
 
-      <p><img className="pin" src={pin} alt="location-pin" /> {user.location}</p>
+      <p className="user-info"><img className="pin" src={pin} alt="location-pin" /> {user.location}</p>
 
-      <img className="pfp" src={user.url} alt="profile-img" />
+      {/* <img className="pfp" src={user.url} alt="profile-img" /> */}
 
       <img className="pfp" src={user.url} alt={user.first_name} />
 
 
       {/* <p>Birthday: {`${user.dob_month}, ${user.dob_day}`}</p> */}
-      <p><img className="gender-icon" src={gender} alt="gender-icon" /> {user.gender_identity}</p>
+      <p className="user-info"><img className="gender-icon" src={gender} alt="gender-icon" /> {user.gender_identity}</p>
       <br />
-      <p> {user.about}</p>
+      <p className="user-about"> {user.about}</p>
       
       </div>
 
