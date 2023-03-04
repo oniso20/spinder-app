@@ -65,3 +65,6 @@ button:hover {
   text-decoration: none;
 }
 
+.back-btn {
+  font-size: 1.4rem;
+}

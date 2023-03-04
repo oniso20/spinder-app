@@ -31,60 +31,70 @@ html {
 
 .wrapper h1 {
   font-family: var(--logo-font);
-  font-size: 5rem;
+  font-size: 5.5rem;
   color: #fdfdfd;
-  margin: 0 0 0 5%;
+  margin: -6% 0 5% 3%;
   display: inline-block;
   letter-spacing: 4px;
 }
 
 .wrapper h3 {
   font-family: var(--main-font);
-  margin: 7% 0 0 5%;
+  text-align: start;
+  margin: 2rem 0 2rem 0;
   color: var(--white-color);
-  font-size: 2rem;
+  font-size: 1.8rem;
   letter-spacing: 2px;
-  display: inline-block;
+  display: block;
 }
 
 .wrapper p {
   font-family: var(--main-font);
-  margin: 10% 0 0 5%;
+  margin: 1rem 0 2rem 0;
   color: var(--white-color);
-  font-size: 1rem;
+  font-size: 1.3rem;
   letter-spacing: 1px;
-  display: inline-block;
-  line-height: 1.5rem;
+  display: block;
+  line-height: 1.5;
+}
+
+.about-spinder {
+  margin-top: 4rem;
+  letter-spacing: 1px;
+}
+
+.about-spinder a {
+  text-decoration: none;
+  color: var(--white-color);
+  cursor: pointer;
 }
 
 /* IMAGES */
 
 .wrapper {
   display: flex;
+  justify-content: center;
   width: 100vw;
   height: 100vh;
 }
 
 .intro-text {
-
-  width: 35vw;
+  width: 50vw;
   height: 60vh;
-  margin: 7% 0 0 10%;
+  margin: 5% 0 0 15%;
 }
 
 .intro-img {
   position: relative;
-  max-width: 65vw;
-  margin: 0 auto;
-  width: 50vw;
+  width: 40vw;
   height: 80vh;
-  margin: 5% 0 0 10%;
+  margin: 4% 0 0 15%;
 }
 
 .couple-img,
 .couple2-img,
 .couple3-img {
-  width: 400px;
+  width: 500px;
   border-radius: 74% 26% 77% 23% / 44% 60% 40% 56%;
   opacity: 0.8;
 }
@@ -92,7 +102,7 @@ html {
 .couple-img {
   transform: rotate(9deg);
   position: absolute;
-  top: 0;
+  top: -5%;
   left: 7%;
 }
 
@@ -108,7 +118,7 @@ html {
 .couple3-img {
   transform: rotate(25deg);
   position: absolute;
-  top: 45%;
+  top: 50%;
   left: 10%;
   z-index: 0;
 }
@@ -141,7 +151,11 @@ button:hover {
   text-decoration: none;
 }
 
+button:active {
+  box-shadow: inset 0 0 6px #333;
+}
+
 .btns {
-  margin: 3rem 0 0 1.5rem;
+  margin: 3rem 0 0 0;
 }
 

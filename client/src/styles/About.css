@@ -1,0 +1,79 @@
+/* ABOUT SECTION */
+
+h2 {
+    text-align: center;
+    margin: 3rem;
+    letter-spacing: 1px;
+}
+
+.wrapper-about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-intro p {
+    line-height: 1.5;
+    width: 70vw;
+    text-align: justify;
+}
+
+.project-intro p {
+    margin: 1rem;
+}
+
+.project-intro img {
+    height: 65px;
+}
+
+/* TEAM SECTION */
+
+.meet-spinder {
+    display: flex;
+    flex-direction: row;
+}
+.team-profile {
+    width: 30vw;
+    height: fit-content;
+    border: 1px solid rgba(255, 255, 255, 0.311);
+    border-radius: 1rem;
+    margin: 1rem;
+    position: relative;
+}
+
+.team-profile i {
+    display: block;
+    margin: 1rem;
+}
+
+.team-profile a {
+    text-decoration: none;
+    color: var(--white-color);
+}
+
+.team-profile img {
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+    position: absolute;
+    top: .5rem;
+    right: 1rem;
+}
+
+.intro-text {
+    width: 27vw;
+    text-align: justify;
+    margin: 5rem 1rem 1rem 1rem;
+}
+
+.intro-text p {
+    margin-top: .5rem;
+    line-height: 1.5;
+}
+
+.spotify-link {
+    margin-top: 2rem;
+}
+
+

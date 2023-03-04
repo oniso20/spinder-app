@@ -6,6 +6,7 @@ import { useCookies } from "react-cookie";
 
 import ChatContainer from "../components/ChatContainer";
 import Nav from "../components/Nav";
+// import ProfileCard from "../components/ProfileCard";
 
 const BrowseProfiles = () => {
   const [user, setUser] = useState(null);
@@ -177,6 +178,7 @@ const BrowseProfiles = () => {
                       key={Math.random()}
                       onSwipe={(dir) => swiped(dir, choiceUser.user_id)}
                       onCardLeftScreen={() => outOfFrame(choiceUser.first_name)}
+                      
                     >
                       <div
                         style={{
@@ -184,6 +186,7 @@ const BrowseProfiles = () => {
                         }}
                         className="card"
                       >
+                         
                         <h3>{choiceUser.first_name}</h3>
                       </div>
                     </TinderCard>

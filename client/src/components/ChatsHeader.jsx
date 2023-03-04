@@ -1,19 +1,19 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
-import { useCookies } from "react-cookie";
+// import { useNavigate } from "react-router-dom";
+// import { useCookies } from "react-cookie";
 
 const ChatsHeader = ({ user }) => {
-  const [cookies, setCookie, removeCookie] = useCookies(["user"]);
+  // const [cookies, setCookie, removeCookie] = useCookies(["user"]);
 
-  let navigate = useNavigate();
+  // let navigate = useNavigate();
 
-  const logout = () => {
-    removeCookie("UserId", cookies.UserId);
-    removeCookie("AuthToken", cookies.AuthToken);
-    navigate("/");
+  // const logout = () => {
+  //   removeCookie("UserId", cookies.UserId);
+  //   removeCookie("AuthToken", cookies.AuthToken);
+  //   navigate("/");
 
-    window.location.reload();
-  };
+  //   window.location.reload();
+  // };
 
   return (
     <div className="chat-container-header">
@@ -23,7 +23,7 @@ const ChatsHeader = ({ user }) => {
         </div>
         <h3>{user.first_name}</h3>
       </div>
-      <p className="log-out-icon" onClick={logout}>x</p>
+      {/* <p className="log-out-icon" onClick={logout}>x</p> */}
     </div>
   );
 };

@@ -2,6 +2,7 @@ import React from "react";
 import { useCookies } from "react-cookie";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import 'bootstrap-icons/font/bootstrap-icons.css';
 
 import Dash from "./pages/Dash";
 import Home from "./pages/Home";
@@ -10,6 +11,7 @@ import Onboarding from "./pages/Onboarding";
 import ChatContainer from "./components/ChatContainer";
 import BrowseProfiles from "./pages/BrowseProfiles";
 import Music from "./components/Music";
+import About from "./pages/About";
 
 
 
@@ -24,6 +26,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Layout />} />
           <Route index element={<Home />} />
+          <Route path="/about" element={<About />} />
           {authToken && <Route path="/onboarding" element={<Onboarding />} />}
           {authToken && <Route path="/browse" element={<BrowseProfiles />} />}
           {authToken && <Route path="/dash" element={<Dash />} />}

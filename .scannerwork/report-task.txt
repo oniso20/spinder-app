@@ -1,0 +1,6 @@
+projectKey=testing_sonarcube
+serverUrl=http://localhost:8889
+serverVersion=9.9.0.65466
+dashboardUrl=http://localhost:8889/dashboard?id=testing_sonarcube
+ceTaskId=AYaSXDazKpQLSXvYnrK-
+ceTaskUrl=http://localhost:8889/api/ce/task?id=AYaSXDazKpQLSXvYnrK-

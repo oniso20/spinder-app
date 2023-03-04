@@ -1,3 +1,19 @@
+/* BACK BUTTON */
+
+.back-btn {
+  width: 40px;
+  height: 40px;
+  padding: 6px;
+  border: 1px solid white;
+  background-color: rgba(237, 237, 237, 0.213);
+  border-radius: 50%;
+  font-size: 1.5rem;
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+}
+
+
 /* Dashboard */
 .swipe {
   position: absolute;
@@ -23,7 +39,7 @@
   margin: 0 auto;
   margin-top: 2%;
   border: 1px solid;
-  border-radius: 1.5rem;
+  border-radius: 1rem;
 }
 
 .dashboard .profile-container {
@@ -41,9 +57,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: inherit;
-  border-top-right-radius: 1.5rem;
-  border-bottom-right-radius: 1.5rem;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
 }
 
 .dashboard .card-container {
@@ -55,7 +70,7 @@
     background-color: #fff;
     width: 400px;
     height: 650px;
-    border-radius: 30px;
+    border-radius: 1rem;
     background-size: cover;
     background-position: center;
   }
@@ -70,7 +85,7 @@
   width: 400px;
   height: 550px;
   margin-top: 10%;
-  border-radius: 1.8rem;
+  border-radius: 1rem;
   background-size: cover;
   background-position: center;
 }
@@ -103,12 +118,13 @@
 
 .chat-container .chat-container-header {
   background: linear-gradient(to right, #DA22FF 25%, #4D19E3  95%);
-  height: 65px;
+  height: 75px;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-top-left-radius: 1.5rem; 
+  border-top-left-radius: 1rem; 
+  margin-bottom: 2rem;
 }
 
 .chat-container button {
@@ -133,12 +149,13 @@
   width: 50px;
   border-radius: 50%;
   overflow: hidden;
-  margin: 5px;
+  margin: .5rem;
 }
 
 .img-container img {
   width: 50px;
   height: 50px;
+  object-fit: cover;
 }
 
 
@@ -165,14 +182,14 @@
 
 .chat-input button {
   width: 110px;
-  padding: 10px;
+  padding: .7rem;
   margin: 0 auto;
   margin-top: 1rem;
 }
 
 .chat-input textarea {
-  padding: 0.5rem;
-  border-radius: 0.5rem;
+  padding: .5rem;
+  border-radius: .5rem;
   border: none;
   font-family: var(--main-font);
 }
