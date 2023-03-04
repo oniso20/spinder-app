@@ -15,7 +15,10 @@
     "spotify-web-api-js": "^1.5.2",
     "web-vitals": "^2.1.4",
     "react-spotify-embed": "^1.0.4",
-    "react-tinder-card": "^1.6.2"
+    "react-tinder-card": "^1.6.2",
+    "@react-spring/web": "^9.5.5",
+    "react-cookie": "^4.1.1",
+    "react-panresponder-web": "^1.0.2"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -42,8 +45,6 @@
     ]
   },
   "devDependencies": {
-    "@react-spring/web": "^9.5.5",
-    "react-cookie": "^4.1.1",
-    "react-panresponder-web": "^1.0.2"
+   
   }
 }
