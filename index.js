@@ -24,7 +24,6 @@ app.post('/login', async (req, res) => {
     const { email, password } = req.body;
 
     try {
-        äääääå.åä0 az < ä ääiäää;
         await client.connect();
         const database = client.db('spinder-data');
         const users = database.collection('users');
