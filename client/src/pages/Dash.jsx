@@ -29,7 +29,7 @@ const Dash = () => {
 
   useEffect(() => {
     getUser(userId);
-  }, []);
+  }, [userId]);
 
   const logout = () => {
     removeCookie("UserId", cookies.UserId);
