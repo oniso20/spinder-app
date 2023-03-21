@@ -1,66 +1,33 @@
-# SPINDER PROJECT
+# SPINDER PROJECT 
 
-### INTRODUCTION
+### INTRODUCTION [LIVE PAGE!](https://spinder.netlify.app/) 
 
-“The fusion of music and tinder will be mind-blowing!” This project aims to solve this gap in the tech industry. We hope to match people based on their music tastes and moods. Music has been seen as a vital element in judging character and “person” vibes. We hope to explore these vibes in helping people connect through music.
+“The fusion of music and tinder will be mind-blowing!”
 
-## Project Authors/Contributors
+This project aims to solve this gap in the tech industry. We hope to match people based on their music tastes and moods. Music has been seen as a vital element in judging character and “person” vibes. We hope to explore these vibes in helping people connect through music.
 
-Jenni Alanko - https://github.com/kirpister
+Please note that Spinder is still under construction!
 
-Alexander Otulugbu - https://github.com/BPharoh
+Spinder was created as part of Business College Helsinki Full Stack Developer program. This was our first major group project where we worked on a full stack application in a team of three. During our two month initial development process to create a minimum viable product we used agile methods like Scrum to keep up with our individual and common progress.
 
-Onis Emem - https://github.com/oniso20
+During the project we got comfortable working in a team and using Git and GitHub to manage our project.
 
-## Available Scripts
+Spinder features include creating a profile with a form that asks some questions about your preferences in music, you can also connect to your Spotify to display your currently playing track! This was possible with Spotify API. When you have created a profile you can go ahead and swipe through other Spinder users and chat with your matches. You can also find a music recommendation page that was curated by Team Spinder.
 
-In the project client or server directory, you can run:
+If you wish to take Spinder for a spin and do not want to create a profile feel free to use our test user account:
 
-### `npm install`
+Email: tester@spinder.com
 
-At the moment npm install should be run in the client and server separately to install all project dependencies.
+Password: test
 
-### `npm run start:frontend`
+## Technologies Used 
 
-This runs the frontend
+![mern](https://user-images.githubusercontent.com/77112303/222419538-8d63681b-526b-4f77-b1ea-eda1d3102fbd.png) 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Landing Page screenshot 
 
-### `npm run start:backend`
+![Näyttökuva 2023-3-2 kello 12 09 05](https://user-images.githubusercontent.com/77112303/222420827-4e55158d-ce25-4484-9363-cba82aa70448.png) 
 
-This runs the backend server on port [http://localhost:8000](http://localhost:8000)
+## Project Authors/Contributors 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-### Git Testing
-Testing git push to repository
+[Jenni Alanko](https://github.com/kirpister) | [Alexander Otulugbu](https://github.com/BPharoh) | [Onis Emem](https://github.com/oniso20)
