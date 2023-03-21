@@ -11,14 +11,14 @@ const ChatContainer = ({ user }) => {
     <div className="chat-container">
       <ChatsHeader user={user} />
 
-      {/* <div>
+      <div>
         <button className="option" onClick={() => setClickedUser(null)}>
           Matches
         </button>
-        <button className="option" disabled={!clickedUser}>
+        {/* <button className="option" disabled={!clickedUser}>
           Chat
-        </button>
-      </div> */}
+        </button> */}
+      </div>
 
       {!clickedUser && (
         <MatchesDisplay
