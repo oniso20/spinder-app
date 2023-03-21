@@ -31,9 +31,9 @@ const About = () => {
                     <h3>Jenni</h3>
                     <img src={jenni} alt="team member img" />
                     </div>
-                    <a href='https://github.com/kirpister' target="_blank" rel="noreferrer" ><i class="bi bi-github"> GitHub</i></a>
+                    <a href='https://github.com/kirpister' target="_blank" rel="noreferrer" ><i className="bi bi-github"> GitHub</i></a>
 
-                    <a href='https://kirpister.vercel.app/' target="_blank" rel="noreferrer" ><i class="bi bi-link-45deg"> Portfolio</i></a>
+                    <a href='https://kirpister.vercel.app/' target="_blank" rel="noreferrer" ><i className="bi bi-link-45deg"> Portfolio</i></a>
                     <div className='intro-text'>
                     <p>My role in creating Spinder was Front-End Developer and I was in charge of designing and bringing alive the Spinder UI.</p>
                     <p>As a music fan I was also excited to integrate Spotify to our project using Spotify API to able to share what you're currently listening to!</p>
@@ -52,9 +52,9 @@ const About = () => {
                     <img src alt="team member img" />
                     
                     </div>
-                    <a href='#' target="_blank" rel="noreferrer" ><i class="bi bi-github"> GitHub</i></a>
+                    <a href='#' target="_blank" rel="noreferrer" ><i className="bi bi-github"> GitHub</i></a>
 
-                    <a href='#' target="_blank" rel="noreferrer" ><i class="bi bi-link-45deg"> Portfolio</i></a>
+                    <a href='#' target="_blank" rel="noreferrer" ><i className="bi bi-link-45deg"> Portfolio</i></a>
                     
                 </div>
                 <div className='team-profile'>
@@ -62,12 +62,12 @@ const About = () => {
                     <h3>Alexander</h3>
                     <img src alt="team member img" />
                     </div>
-                    <a href='#' target="_blank" rel="noreferrer" ><i class="bi bi-github"> GitHub</i></a>
+                    <a href='#' target="_blank" rel="noreferrer" ><i className="bi bi-github"> GitHub</i></a>
 
-                    <a href='#' target="_blank" rel="noreferrer" ><i class="bi bi-link-45deg"> Portfolio</i></a>
+                    <a href='#' target="_blank" rel="noreferrer" ><i className="bi bi-link-45deg"> Portfolio</i></a>
                 </div>
                 <div className='back-btn'>
-                    <i onClick={() => navigate(-1)} class="bi bi-skip-backward"></i>
+                    <i onClick={() => navigate(-1)} className="bi bi-skip-backward"></i>
                 </div>
                 
             </div>

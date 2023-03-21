@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import TinderCard from "react-tinder-card";
 import axios from "axios";
 import { useCookies } from "react-cookie";
@@ -15,7 +14,7 @@ const BrowseProfiles = () => {
   const [mlUsers, setMlUsers] = useState([]);
   const [moodUsers, setMoodUsers] = useState([]);
   const [creditUsers, setCreditUsers] = useState([]);
-  const [cookies] = useCookies(["user"]);
+  const [cookies, setCookie] = useCookies(["user"]);
   const [lastDirection, setLastDirection] = useState();
 
   const userId = cookies.UserId;
@@ -156,7 +155,8 @@ const BrowseProfiles = () => {
       return !matchedUserChoicesId?.includes(choiceUser.user_id);
     }
   );
-
+  
+  
   return (
     <>
       {user && (
