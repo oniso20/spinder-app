@@ -53,7 +53,9 @@ const ProfileCard = ({ user }) => {
       </div>
       <div className="spotify-box">
 
-     <Spotify />
+      {user ?         
+     <Spotify />  :  
+     <></> }
       </div> 
    
 

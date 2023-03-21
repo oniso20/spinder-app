@@ -14,7 +14,8 @@ h3 {
     width: 600px;
     height: fit-content;
     border-radius: 1rem;
-    background-color: rgba(240, 255, 255, 0.336);
+    /* background-color: rgba(240, 255, 255, 0.336); */
+    background: linear-gradient(45deg, #da22ff, #9733ee); 
     margin: 0 auto;
     margin-top: -5%;
     margin-bottom: 3rem;

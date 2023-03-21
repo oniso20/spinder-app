@@ -46,46 +46,25 @@ const About = () => {
         <img src={mern} alt="mern-img" />
       </div>
       <>
-        <h2>Meet the team behind Spinder</h2>
-        <div className="meet-spinder">
-          <div className="team-profile">
-            <div className="info-box">
-              <h3>Jenni</h3>
-              <img src={jenni} alt="team member img" />
-            </div>
-            <a
-              href="https://github.com/kirpister"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <i class="bi bi-github"> GitHub</i>
-            </a>
+                <h2>Meet the team behind Spinder</h2>
+                <div className='meet-spinder'>
+                <div className='team-profile'>
+                    <div className='info-box'>
+                    <h3>Jenni</h3>
+                    <img src={jenni} alt="team member img" />
+                    </div>
+                    <a href='https://github.com/kirpister' target="_blank" rel="noreferrer" ><i className="bi bi-github"> GitHub</i></a>
 
-            <a
-              href="https://kirpister.vercel.app/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <i class="bi bi-link-45deg"> Portfolio</i>
-            </a>
-            <div className="intro-text">
-              <p>
-                My role in creating Spinder was Front-End Developer and I was in
-                charge of designing and bringing alive the Spinder UI.
-              </p>
-              <p>
-                As a music fan I was also excited to integrate Spotify to our
-                project using Spotify API to able to share what you're currently
-                listening to!
-              </p>
-              <div className="spotify-link">
-                <Spotify
-                  wide
-                  link="https://open.spotify.com/track/2NS5hylxl4QNQcD6Vjmtpj?si=f7668b685162442f"
-                />
-              </div>
-            </div>
-          </div>
+                    <a href='https://kirpister.vercel.app/' target="_blank" rel="noreferrer" ><i className="bi bi-link-45deg"> Portfolio</i></a>
+                    <div className='intro-text'>
+                    <p>My role in creating Spinder was Front-End Developer and I was in charge of designing and bringing alive the Spinder UI.</p>
+                    <p>As a music fan I was also excited to integrate Spotify to our project using Spotify API to able to share what you're currently listening to!</p>
+                    <div className='spotify-link'>
+                    <Spotify wide link="https://open.spotify.com/track/2NS5hylxl4QNQcD6Vjmtpj?si=f7668b685162442f" />
+                    </div>
+                    </div>
+                </div>
+              
           <div className="team-profile">
             <div className="info-box">
               <h3>Onis Emem</h3>
@@ -113,6 +92,7 @@ const About = () => {
               </p>
             </div>
           </div>
+          
           <div className="team-profile">
             <div className="info-box">
               <h3>Alexander</h3>
