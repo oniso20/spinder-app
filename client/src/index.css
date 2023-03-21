@@ -61,6 +61,12 @@
   border-bottom-right-radius: 1rem;
 }
 
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .dashboard .card-container {
     width: 400px;
     height: 650px;

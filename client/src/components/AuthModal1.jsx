@@ -11,7 +11,7 @@ const AuthModal1 = ({ setShowModal, setIsSignUp, isSignUp }) => {
   const [password, setPassword] = useState(null);
   const [confirmPassword, setConfirmPassword] = useState(null);
   const [error, setError] = useState(null);
-  const [cookies, setCookie, removeCookie] = useCookies(["user"]);
+  const [setCookie] = useCookies(["user"]);
 
   let navigate = useNavigate();
 

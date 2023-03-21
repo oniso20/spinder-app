@@ -6,7 +6,7 @@ import { useCookies } from "react-cookie";
 
 import ChatContainer from "../components/ChatContainer";
 import Nav from "../components/Nav";
-// import ProfileCard from "../components/ProfileCard";
+import ProfileCard from "../components/ProfileCard";
 
 const BrowseProfiles = () => {
   const [user, setUser] = useState(null);
@@ -15,7 +15,7 @@ const BrowseProfiles = () => {
   const [mlUsers, setMlUsers] = useState([]);
   const [moodUsers, setMoodUsers] = useState([]);
   const [creditUsers, setCreditUsers] = useState([]);
-  const [cookies, setCookie, removeCookie] = useCookies(["user"]);
+  const [cookies] = useCookies(["user"]);
   const [lastDirection, setLastDirection] = useState();
 
   const userId = cookies.UserId;
@@ -180,7 +180,8 @@ const BrowseProfiles = () => {
                       onCardLeftScreen={() => outOfFrame(choiceUser.first_name)}
                       
                     >
-                      <div
+                      <ProfileCard user={choiceUser} style={{ color: 'grey' }} />
+                      {/* <div
                         style={{
                           backgroundImage: "url(" + choiceUser.url + ")",
                         }}
@@ -188,7 +189,8 @@ const BrowseProfiles = () => {
                       >
                          
                         <h3>{choiceUser.first_name}</h3>
-                      </div>
+                       
+                      </div> */}
                     </TinderCard>
                   ))}
                 <div className="swipe-info">

@@ -3,11 +3,12 @@ import queryString from "query-string";
 import axios from "axios";
 
 
-const redirectUri = "https://spinder.netlify.app/dash";
-// const redirectUri = "http://localhost:3000/dash";
+// const redirectUri = "https://spinder.netlify.app/dash";
+const redirectUri = "http://localhost:3000/dash";
+const client_id = "d58deafe30da46acae3bde80bd045155"
 
 
-const scopes = ["user-read-playback-state", "user-library-read", "user-top-read"];
+const scopes = ["user-read-playback-state"];
 
 const Spotify = () => {
 
@@ -17,7 +18,7 @@ const Spotify = () => {
 
   const handleLogin = () => {
 
-    const redirectToSpotify = `https://accounts.spotify.com/authorize?client_id=${process.env.REACT_APP_SPOTIFY_CLIEND_ID}&redirect_uri=${redirectUri}&scope=${scopes.join(
+    const redirectToSpotify = `https://accounts.spotify.com/authorize?client_id=${client_id}&redirect_uri=${redirectUri}&scope=${scopes.join(
       "%20"
     )}&response_type=token`;
     window.location.href = redirectToSpotify;
